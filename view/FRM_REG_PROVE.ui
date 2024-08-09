@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>811</width>
+    <height>689</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>811</width>
+    <height>689</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>811</width>
+    <height>689</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-3</y>
+      <width>821</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../view_img/fondo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-3</y>
+      <width>811</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:00715909, stop:0 rgba(0, 0, 0, 35), stop:0.375 rgba(0, 0, 0, 50), stop:0.835227 rgba(0, 0, 0, 75));
+
+border: 3px solid white; </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>149</x>
+      <y>10</y>
+      <width>511</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_listar_prov">
+    <property name="geometry">
+     <rect>
+      <x>219</x>
+      <y>20</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Listar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_cancelar_prov">
+    <property name="geometry">
+     <rect>
+      <x>479</x>
+      <y>20</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: black;
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(255, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(166, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cancelar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_nuevo_prov">
+    <property name="geometry">
+     <rect>
+      <x>349</x>
+      <y>20</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Nuevo</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="window_1_pv" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>94</y>
+      <width>811</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>771</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>91</x>
+       <y>30</y>
+       <width>261</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:00715909, stop:0 rgba(0, 0, 0, 20), stop:0.375 rgba(0, 0, 0, 50), stop:0.835227 rgba(0, 0, 0, 75));
+border-radius: 20px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>67</y>
+       <width>141</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../view_img/Proveedor.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>241</x>
+       <y>38</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../view_img/METROSPLASH.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>101</x>
+       <y>180</y>
+       <width>241</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white</string>
+     </property>
+     <property name="text">
+      <string>Registro de Proveedores</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="GB_PROV_1">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>272</y>
+       <width>351</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white
+</string>
+     </property>
+     <property name="title">
+      <string>Datos de la Compañia</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QLineEdit" name="le_razon_soc">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>41</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgba(0, 0);
+color:rgba(255, 255, 255, 230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Razón  Social</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_ruc">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>112</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgba(0, 0);
+color:rgba(255, 255, 255, 230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>RUC</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_direcc_prov">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>189</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgba(0, 0);
+color:rgba(255, 255, 255, 230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Dirección</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="GB_PROV_2">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>80</y>
+       <width>351</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white
+</string>
+     </property>
+     <property name="title">
+      <string>Datos de Contacto</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QLineEdit" name="le_telf_prov">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>40</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgba(0, 0);
+color:rgba(255, 255, 255, 230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Teléfono</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_email_prov">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>113</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:2px solid rgba(0, 0);
+color:rgba(255, 255, 255, 230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Email</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="bt_guardar_prov">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>440</y>
+       <width>191</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 255, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(0, 217, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string>Guardar
+Proveedor</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="GB_PROV_3">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>290</y>
+       <width>351</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Rubro</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QComboBox" name="cb_rubro_prov">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>50</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;    
+}
+QComboBox::down-arrow {
+	border-image: url(:/Imagenes/203484.png);
+}
+
+QComboBox::hover{
+	background-color: rgb(241, 241, 241);
+}
+</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_9</zorder>
+   <zorder>window_1_pv</zorder>
+   <zorder>bt_cancelar_prov</zorder>
+   <zorder>bt_nuevo_prov</zorder>
+   <zorder>bt_listar_prov</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../view_img/Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

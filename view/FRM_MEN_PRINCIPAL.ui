@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>841</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>841</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="fondo1">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>841</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../view_img/fondo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fondo2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>841</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../view_img/fondo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_ingreso_ventas">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>152</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}</string>
+    </property>
+    <property name="text">
+     <string>S.I de Ventas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_ingreso_compras">
+    <property name="geometry">
+     <rect>
+      <x>203</x>
+      <y>152</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}</string>
+    </property>
+    <property name="text">
+     <string>S.I de Compras</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_ingreso_almacen">
+    <property name="geometry">
+     <rect>
+      <x>363</x>
+      <y>152</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}</string>
+    </property>
+    <property name="text">
+     <string>S.I de Almacen</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_ingreso_reportes">
+    <property name="geometry">
+     <rect>
+      <x>513</x>
+      <y>152</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}</string>
+    </property>
+    <property name="text">
+     <string>Reportes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_cerrar_sesion">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(255, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(166, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cerrar Sesion</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>124</y>
+      <width>811</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cb_estado">
+    <property name="geometry">
+     <rect>
+      <x>569</x>
+      <y>32</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;    
+}
+
+QComboBox::down-arrow {
+	border-image: url(:/Imagenes/203484.png);
+}
+
+QComboBox::hover{
+	background-color: rgb(241, 241, 241);
+}
+</string>
+    </property>
+    <property name="maxCount">
+     <number>2147483647</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>2</y>
+      <width>81</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;</string>
+    </property>
+    <property name="text">
+     <string>Estado:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>89</y>
+      <width>841</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(248, 248, 248);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fondo3">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>15</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../view_img/METROSPLASH.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>10</y>
+      <width>601</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_ingreso_seguridad">
+    <property name="geometry">
+     <rect>
+      <x>663</x>
+      <y>152</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(241, 241, 241);
+}
+
+QPushButton:pressed {
+	background-color: rgb(223, 223, 223);
+}</string>
+    </property>
+    <property name="text">
+     <string>Seguridad</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>109</y>
+      <width>841</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:00715909, stop:0 rgba(0, 0, 0, 35), stop:0.375 rgba(0, 0, 0, 50), stop:0.835227 rgba(0, 0, 0, 75));
+
+border: 3px solid white; </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-7</y>
+      <width>841</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:00715909, stop:0 rgba(0, 0, 0, 35), stop:0.375 rgba(0, 0, 0, 50), stop:0.835227 rgba(0, 0, 0, 75));
+
+border: 3px solid white; </string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>35</x>
+      <y>248</y>
+      <width>771</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QWidget" name="accion_ventas" native="true">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>26</y>
+       <width>721</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="vent_3">
+      <property name="geometry">
+       <rect>
+        <x>456</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de
+Venta</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="vent_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de
+Productos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="vent_1">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de
+Clientes</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="accion_compras" native="true">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>26</y>
+       <width>721</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="compr_2">
+      <property name="geometry">
+       <rect>
+        <x>372</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Generar
+Pedido de
+Compra</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="compr_1">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de
+Proveedores</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="accion_almacen" native="true">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>26</y>
+       <width>721</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="almac_2">
+      <property name="geometry">
+       <rect>
+        <x>372</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de Guia
+de Salida</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="almac_1">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Registro
+de Guia
+de Entrada</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="accion_reportes" native="true">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>26</y>
+       <width>721</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="report_3">
+      <property name="geometry">
+       <rect>
+        <x>456</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Generar
+el
+Inventario</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="report_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Reporte
+de
+Compras</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="report_1">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Reporte
+de
+Ventas</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="accion_seguridad" native="true">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>26</y>
+       <width>721</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="segur_3">
+      <property name="geometry">
+       <rect>
+        <x>456</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Restaurar
+la Base
+de Datos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="segur_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Generar
+el BackUp
+de la Base
+de Datos</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="segur_1">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>26</y>
+        <width>141</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(166, 243, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(139, 209, 10);
+}</string>
+      </property>
+      <property name="text">
+       <string>Politicas
+de
+Seguridad</string>
+      </property>
+     </widget>
+    </widget>
+    <zorder>accion_reportes</zorder>
+    <zorder>accion_almacen</zorder>
+    <zorder>accion_seguridad</zorder>
+    <zorder>accion_ventas</zorder>
+    <zorder>accion_compras</zorder>
+   </widget>
+   <zorder>fondo2</zorder>
+   <zorder>label_5</zorder>
+   <zorder>fondo1</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_6</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_7</zorder>
+   <zorder>label_2</zorder>
+   <zorder>fondo3</zorder>
+   <zorder>bt_ingreso_almacen</zorder>
+   <zorder>bt_ingreso_compras</zorder>
+   <zorder>cb_estado</zorder>
+   <zorder>bt_ingreso_reportes</zorder>
+   <zorder>bt_ingreso_seguridad</zorder>
+   <zorder>bt_cerrar_sesion</zorder>
+   <zorder>bt_ingreso_ventas</zorder>
+   <zorder>groupBox</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../view_img/Recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

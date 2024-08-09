@@ -1,0 +1,24 @@
+<RCC>
+  <qresource prefix="Imagenes">
+    <file>203484.png</file>
+    <file>5067875.png</file>
+    <file>boleta.jpg</file>
+    <file>cajas.jpg</file>
+    <file>clientesvarios.png</file>
+    <file>cyberseguridad.png</file>
+    <file>factura.jpg</file>
+    <file>fondo.png</file>
+    <file>guia.jpg</file>
+    <file>img_cliente.png</file>
+    <file>mate design.jpg</file>
+    <file>metrologo.png</file>
+    <file>METROSPLASH.png</file>
+    <file>oscuro.jpg</file>
+    <file>productos.jpg</file>
+    <file>provee_comp.jpg</file>
+    <file>Proveedor.png</file>
+    <file>REPORTEVENTAS.png</file>
+    <file>usuario2.png</file>
+    <file>venta.jpg</file>
+  </qresource>
+</RCC>
