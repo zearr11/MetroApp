@@ -1,4 +1,4 @@
 from controller.AppPrincipal import AppInicial
-from model.Clientes import ClienteCLASS
+from model.Proveedor import ProveedorCLASS
 
 InicioAplicacion = AppInicial()

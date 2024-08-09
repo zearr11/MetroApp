@@ -436,7 +436,7 @@ padding-bottom:7px;</string>
      <property name="geometry">
       <rect>
        <x>410</x>
-       <y>80</y>
+       <y>68</y>
        <width>351</width>
        <height>191</height>
       </rect>
@@ -523,7 +523,7 @@ padding-bottom:7px;</string>
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>440</y>
+       <y>442</y>
        <width>191</width>
        <height>81</height>
       </rect>
@@ -563,7 +563,7 @@ Proveedor</string>
      <property name="geometry">
       <rect>
        <x>410</x>
-       <y>290</y>
+       <y>273</y>
        <width>351</width>
        <height>121</height>
       </rect>
@@ -631,6 +631,32 @@ QComboBox::hover{
 </string>
       </property>
      </widget>
+    </widget>
+    <widget class="QLabel" name="warning">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>393</y>
+       <width>351</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </widget>
    <zorder>label</zorder>

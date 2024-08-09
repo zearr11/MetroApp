@@ -27,8 +27,18 @@ class TipoDOC_CLASS:
         
     def get_tipo_doc(self):
         return self.__tipoDoc
-
+  
+    
 #3
+class Rubro_CLASS:
+    def __init__(self, TipoRubro):
+        self.__TipoRubro = TipoRubro
+        
+    def get_TipoRubro(self):
+        return self.__TipoRubro
+
+
+#4
 class PersonaCLASS(DatosCLASS, TipoDOC_CLASS):
     def __init__(self, Nombres, Apellidos, TypeDoc, Num_doc, telefono, email):
         super().__init__(telefono, email)
