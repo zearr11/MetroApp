@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from controller import MenuPrincipal, RegUsuarios
 
-class PoliticasSeguridad:
+
+class PoliticasSeguridadFRM:
     
     def __init__(self):
         self.poli = uic.loadUi("view/FRM_POL_SEC.ui")
@@ -15,8 +16,9 @@ class PoliticasSeguridad:
     
     def CancelarPol(self):
         self.poli.close()
-        self.menu = MenuPrincipal.Menu()
+        self.menu = MenuPrincipal.MenuFRM()
+        
         
     def CreacionUser(self):
         self.poli.close()
-        self.newUser = RegUsuarios.RegUsuarios()
+        self.newUser = RegUsuarios.RegUsuariosFRM()

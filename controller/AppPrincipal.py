@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from controller import Login
 import time
 
+
 class AppInicial:
     def __init__(self):
         self.app = QtWidgets.QApplication([])
@@ -16,6 +17,6 @@ class AppInicial:
         
         self.splash.finish(self.splash)
         
-        self.log = Login.Login()
+        self.log = Login.LoginFRM()
         self.app.exec()
         

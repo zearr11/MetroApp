@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from controller import MenuPrincipal
 
-class RegProductos:
+
+class RegProductosFRM:
     
     def __init__(self):
         self.newProduct = uic.loadUi("view/FRM_REG_PROD_NUEVO.ui")
@@ -12,4 +13,4 @@ class RegProductos:
         
     def CancelarProduct(self):
         self.newProduct.close()
-        self.menu = MenuPrincipal.Menu()
+        self.menu = MenuPrincipal.MenuFRM()

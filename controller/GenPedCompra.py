@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from controller import MenuPrincipal
 
-class GenPedCompra:
+
+class GenPedCompraFRM:
     
     def __init__(self):
         self.newPedCompr = uic.loadUi("view/FRM_GEN_PED_COMPR.ui")
@@ -10,6 +11,7 @@ class GenPedCompra:
         self.newPedCompr.bt_cancelar_pedcompr.clicked.connect(self.CancelarPedCompr)
         self.newPedCompr.show()
         
+        
     def CancelarPedCompr(self):
         self.newPedCompr.close()
-        self.menu = MenuPrincipal.Menu()
+        self.menu = MenuPrincipal.MenuFRM()

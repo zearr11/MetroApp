@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from controller import MenuPrincipal
 
-class RegProveedor:
+
+class RegProveedorFRM:
     
     def __init__(self):
         self.newProv = uic.loadUi("view/FRM_REG_PROVE.ui")
@@ -10,6 +11,7 @@ class RegProveedor:
         self.newProv.bt_cancelar_prov.clicked.connect(self.CancelarProv)
         self.newProv.show()
         
+        
     def CancelarProv(self):
         self.newProv.close()
-        self.menu = MenuPrincipal.Menu()
+        self.menu = MenuPrincipal.MenuFRM()

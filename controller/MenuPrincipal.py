@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra
 
-class Menu:
+
+class MenuFRM:
     
     def __init__(self):
         self.menu = uic.loadUi("view/FRM_MEN_PRINCIPAL.ui")
@@ -63,23 +64,22 @@ class Menu:
     #BOTON ingreso_ventas:
     def acceso_reg_clientes(self):
         self.menu.close()
-        self.newCient = RegClientes.RegClientes()
+        self.newCient = RegClientes.RegClientesFRM()
     def acceso_reg_produc(self):
         self.menu.close()
-        self.newProduct = RegProductos.RegProductos()
+        self.newProduct = RegProductos.RegProductosFRM()
     def acceso_reg_vent(self):
         self.menu.close()
-        self.newVenta = RegVenta.RegVenta()
+        self.newVenta = RegVenta.RegVentaFRM()
         
     #BOTON ingreso_compras: 
     def acceso_reg_prov(self):
         self.menu.close()
-        self.newProv = RegProveedor.RegProveedor()
+        self.newProv = RegProveedor.RegProveedorFRM()
 
     def acceso_gen_pedcompr(self):
         self.menu.close()
-        self.newPedCompr = GenPedCompra.GenPedCompra()
-        
+        self.newPedCompr = GenPedCompra.GenPedCompraFRM()
     
     #BOTON ingreso_almacen: 
     
@@ -90,9 +90,9 @@ class Menu:
     #BOTON ingreso_seguridad: 
     def acceso_pol_seguridad(self):
         self.menu.close()
-        self.poli = PoliticasSeguridad.PoliticasSeguridad()
+        self.poli = PoliticasSeguridad.PoliticasSeguridadFRM()
         
     
     def cierre_sesion(self):
         self.menu.close()
-        self.log = Login.Login()
+        self.log = Login.LoginFRM()

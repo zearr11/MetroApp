@@ -1,15 +1,17 @@
 from PyQt5 import uic
 from view_img import Recursos
-from dao import UsuarioDao
+from dao.LoginDao import LoginBD
 from controller import MenuPrincipal
 
-class Login:
+
+class LoginFRM:
     
     def __init__(self):
         self.log = uic.loadUi("view/FRM_LOGIN.ui")
         self.log.setWindowTitle("Acceso Login")
         self.log.login.clicked.connect(self.acceso_login)
         self.log.show()
+        
         
     def acceso_login(self):
         user = self.log.username.text()
@@ -23,9 +25,11 @@ class Login:
                 self.log.warning.setText("¡Datos inválidos!")
                 
             else:
-                PruebaLog = UsuarioDao.UsuarioBD()
+                PruebaLog = LoginBD()
                 if PruebaLog.ConsultaLogin(user, passw) == True:
                     self.log.close()
-                    self.InicioMenu = MenuPrincipal.Menu()
+                    self.InicioMenu = MenuPrincipal.MenuFRM()
                 else:
-                    self.log.warning.setText("¡Datos inválidos!")
+                    self.log.warning.setText("¡Usuario no encontrado!")
+                    
+                    
