@@ -8,17 +8,13 @@ class CargoBD:
         cursor = nbd.conexionBD.cursor()
         cursor.execute("SELECT TipoCargo FROM cargo")
         rows = cursor.fetchall()
-        cursor.close()
-        nbd.CloseConexion()
         return [row[0] for row in rows]
     
-    def ObtenerCargoID(self, cargo):
+    def ObtenerCargoID(self, TipoCargo):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
-        ConsultaCargo = "SELECT idCargo FROM cargo WHERE TipoCargo = '{}'".format(cargo)
+        ConsultaCargo = "SELECT idCargo FROM cargo WHERE TipoCargo = '{}'".format(TipoCargo)
         cursor.execute(ConsultaCargo)
         objCargoID = cursor.fetchone()
         objCargo = objCargoID[0]
-        cursor.close()
-        nbd.CloseConexion()
         return objCargo

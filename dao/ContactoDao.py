@@ -3,24 +3,21 @@ from util import ConexionBD
 
 class ContactoBD:
     
-    def ObtenerContactoID(self, telefono, correo):
+    def ObtenerContactoID(self, Telefono, Email):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
-        ConsultaContacto = "SELECT idContacto FROM contacto WHERE Telefono = '{}' AND Email = '{}'".format(telefono, correo)
+        ConsultaContacto = "SELECT idContacto FROM contacto WHERE Telefono = '{}' AND Email = '{}'".format(Telefono, Email)
         cursor.execute(ConsultaContacto)
         objContactoID = cursor.fetchone()
         objContacto = objContactoID[0]
-        cursor.close()
-        nbd.CloseConexion()
         return objContacto
     
-    def InsertTablaContacto(self, telefono, correo): 
+    def InsertTablaContacto(self, Telefono, Email): 
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
-        Insert = "insert into CONTACTO(Telefono, Email) values ('{}', '{}')".format(telefono, correo)
+        Insert = "insert into contacto(Telefono, Email) values ('{}', '{}')".format(Telefono, Email)
         cursor.execute(Insert)
         nbd.conexionBD.commit()
         cursor.close()
-        nbd.CloseConexion()
         
         

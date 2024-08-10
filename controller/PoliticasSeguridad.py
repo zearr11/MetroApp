@@ -12,7 +12,7 @@ class PoliticasSeguridadFRM:
         self.poli.bt_crearUser.clicked.connect(self.CreacionUser)
         
         self.poli.show()
-        
+    
     
     def CancelarPol(self):
         self.poli.close()

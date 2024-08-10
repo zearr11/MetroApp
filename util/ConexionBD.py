@@ -8,5 +8,3 @@ class ConectBaseData:
                                      database="mydb",
                                      port="3306")
         
-    def CloseConexion(self):
-        self.conexionBD.close()

@@ -3,24 +3,21 @@ from util import ConexionBD
 
 class PersonaBD:   
     
-    def ObtenerPersonaID(self, Nombres, Apellidos, NumeroDocumento, idDocumento, idContacto):
+    def ObtenerPersonaID(self, Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
-        ConsultaPersona = "SELECT idPersona FROM persona WHERE Nombres = '{}' AND Apellidos = '{}' AND NumeroDocumento = '{}' AND Documento_idDocumento = '{}' AND Contacto_idContacto = '{}'".format(Nombres, Apellidos, NumeroDocumento, idDocumento, idContacto)
+        ConsultaPersona = "SELECT idPersona FROM persona WHERE Nombres = '{}' AND Apellidos = '{}' AND Contacto_idContacto = '{}' AND NumeroDocumento_idNumeroDocumento = '{}' AND NumeroDocumento_TipoDocumento_idTipoDocumento = '{}'".format(Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento)
         cursor.execute(ConsultaPersona)
         objPersonaID = cursor.fetchone()
         objPersona = objPersonaID[0]
-        cursor.close()
-        nbd.CloseConexion()
         return objPersona
     
         
-    def InsertTablaPersona(self, Nombres, Apellidos, NumeroDocumento, idDocumento, idContacto):
+    def InsertTablaPersona(self,Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
-        Insert = "insert into persona(Nombres, Apellidos, NumeroDocumento, Documento_idDocumento, Contacto_idContacto) values('{}', '{}', '{}', '{}', '{}')".format(Nombres, Apellidos, NumeroDocumento, idDocumento, idContacto)
+        Insert = "insert into persona(Nombres, Apellidos, Contacto_idContacto, NumeroDocumento_idNumeroDocumento, NumeroDocumento_TipoDocumento_idTipoDocumento) values('{}', '{}', '{}', '{}', '{}')".format(Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento)
         cursor.execute(Insert)
         nbd.conexionBD.commit()
         cursor.close()
-        nbd.CloseConexion()
         

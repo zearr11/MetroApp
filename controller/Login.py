@@ -1,6 +1,6 @@
 from PyQt5 import uic
 from view_img import Recursos
-from dao.LoginDao import LoginBD
+from dao import LoginDao
 from controller import MenuPrincipal
 
 
@@ -19,16 +19,17 @@ class LoginFRM:
 
         if len(user)== 0 or len(passw) == 0:
             self.log.warning.setText("¡Los campos no deben estar vacios!")
-                
+            
         else:
             if len(user)> 8 or len(passw)<8:
                 self.log.warning.setText("¡Datos inválidos!")
                 
             else:
-                PruebaLog = LoginBD()
+                PruebaLog = LoginDao.LoginBD()
                 if PruebaLog.ConsultaLogin(user, passw) == True:
                     self.log.close()
                     self.InicioMenu = MenuPrincipal.MenuFRM()
+                    
                 else:
                     self.log.warning.setText("¡Usuario no encontrado!")
                     

@@ -76,7 +76,6 @@ class MenuFRM:
     def acceso_reg_prov(self):
         self.menu.close()
         self.newProv = RegProveedor.RegProveedorFRM()
-
     def acceso_gen_pedcompr(self):
         self.menu.close()
         self.newPedCompr = GenPedCompra.GenPedCompraFRM()
