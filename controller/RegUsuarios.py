@@ -3,6 +3,8 @@ from controller import PoliticasSeguridad
 from dao import CargoDao, PermisoDao, TipoDocumentoDao, UsuarioDao
 from model import UsuariosModel
 from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QTableWidget
+from PyQt5.QtCore import Qt
 import re
 
 
@@ -35,9 +37,8 @@ class RegUsuariosFRM:
             self.newUser.wd_modUser.show()
             self.UsuarioDao = UsuarioDao.UsuarioBD()
             self.ListarUsuarios()
-            self.newUser.tw_showUser.setColumnWidth(6, 125)
-            self.newUser.tw_showUser.setColumnWidth(7, 75)
-            self.newUser.tw_showUser.setColumnWidth(8, 135)
+            self.newUser.tw_showUser.resizeColumnsToContents()
+            self.newUser.tw_showUser.setEditTriggers(QTableWidget.NoEditTriggers)
             #Cargado de Dao's en ComboBox's
             self.newUser.qcb_cargo.addItems(Cargos)
             self.newUser.qcb_permisos.addItems(Permisos)
@@ -53,18 +54,6 @@ class RegUsuariosFRM:
     def OcultarWidgets(self):
         self.newUser.wd_modUser.hide()
         self.newUser.wd_regUser.hide()
-        
-    def BloquearTextoMod(self):
-        self.newUser.le_usuario.setEnabled(False)
-        self.newUser.le_pass.setEnabled(False)
-        self.newUser.le_name.setEnabled(False)
-        self.newUser.le_last.setEnabled(False)
-        self.newUser.le_tipDoc.setEnabled(False)
-        self.newUser.le_numDoc.setEnabled(False)
-        self.newUser.le_celu.setEnabled(False)
-        self.newUser.le_email.setEnabled(False)
-        self.newUser.qcb_cargo.setEnabled(False)
-        self.newUser.qcb_permisos.setEnabled(False)
 
 ########################################################################   
 # WIDGET REGISTRO DE NUEVO USUARIO
@@ -141,10 +130,22 @@ class RegUsuariosFRM:
     def ValidacionUserCorrecta(self):
         RegNuevoUser = UsuariosModel.UsuariosCLASS(self.NombreUser, self.Password, self.Nombres, self.Apellidos, self.Celular, self.Email, self.NumeroDNI, self.TipoDoc, self.Cargo, self.Permisos)
         RegNuevoUser.Nuevo_Usuario()
-        self.newUser.warning.setText("¡Registro exitoso!")
+        self.newUser.warning.setText("¡Registro Exitoso!")
         
 ########################################################################   
 # WIDGET MODIFICACION DE USUARIO
+
+    def BloquearTextoMod(self):
+        self.newUser.le_usuario.setEnabled(False)
+        self.newUser.le_pass.setEnabled(False)
+        self.newUser.le_name.setEnabled(False)
+        self.newUser.le_last.setEnabled(False)
+        self.newUser.le_tipDoc.setEnabled(False)
+        self.newUser.le_numDoc.setEnabled(False)
+        self.newUser.le_celu.setEnabled(False)
+        self.newUser.le_email.setEnabled(False)
+        self.newUser.qcb_cargo.setEnabled(False)
+        self.newUser.qcb_permisos.setEnabled(False)
     
     def ListarUsuarios(self):
         ListaUser = self.UsuarioDao.ConsultaTablaUsuario()
@@ -152,7 +153,6 @@ class RegUsuariosFRM:
         self.newUser.tw_showUser.verticalHeader().setVisible(False)
         self.newUser.tw_showUser.setRowCount(Cantidad)
         Fila = 0
-        
         for objUser in ListaUser:
             self.newUser.tw_showUser.setItem(Fila, 0, QTableWidgetItem(str(objUser[0])))
             self.newUser.tw_showUser.setItem(Fila, 1, QTableWidgetItem(objUser[1]))
@@ -166,6 +166,12 @@ class RegUsuariosFRM:
             self.newUser.tw_showUser.setItem(Fila, 9, QTableWidgetItem(objUser[9]))
             self.newUser.tw_showUser.setItem(Fila, 10, QTableWidgetItem(str(objUser[10])))
             Fila +=1
+        
+        for row in range(self.newUser.tw_showUser.rowCount()):
+            for column in range(self.newUser.tw_showUser.columnCount()):
+                item = self.newUser.tw_showUser.item(row, column)
+                if item:
+                    item.setTextAlignment(Qt.AlignCenter)
         
     def ClickEnTabla(self, fila):
         idUser = self.newUser.tw_showUser.item(fila, 0).text()
@@ -186,6 +192,7 @@ class RegUsuariosFRM:
         self.newUser.qcb_cargo.setEnabled(True)
         self.newUser.qcb_permisos.setCurrentText(self.objUsuario[10])
         self.newUser.qcb_permisos.setEnabled(True)
+        self.newUser.warning_2.setText("")
         
     def RegresarChanges(self):
         self.CancelarReg()
@@ -198,37 +205,40 @@ class RegUsuariosFRM:
         self.CambioCargo = self.newUser.qcb_cargo.currentText()
         self.CambioPermiso = self.newUser.qcb_permisos.currentText()
         
-        if len(self.CambioUser) == 0 or len(self.CambioPass) == 0 or len(self.CambioCelu) == 0 or len(self.CambioEmail) == 0:
-            self.newUser.warning_2.setText("Para actualizar los datos del Usuario, ningun campo debe estar vacio")
-        else:
-            if self.CambioCargo == "Seleccione" or self.CambioPermiso == 0:
-                self.newUser.warning_2.setText("Selecciona un Item válido en los desplegables")
+        if self.newUser.le_usuario.isEnabled():
+            if len(self.CambioUser) == 0 or len(self.CambioPass) == 0 or len(self.CambioCelu) == 0 or len(self.CambioEmail) == 0:
+                self.newUser.warning_2.setText("Para actualizar los datos del Usuario, ningun campo debe estar vacio")
             else:
-                email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-                if not re.match(email_regex, self.CambioEmail):
-                    self.newUser.warning_2.setText("El correo electrónico ingresado no es válido")
+                if self.CambioCargo == "Seleccione" or self.CambioPermiso == 0:
+                    self.newUser.warning_2.setText("Selecciona un Item válido en los desplegables")
                 else:
-                    if len(self.CambioUser)<5:
-                        self.newUser.warning_2.setText("Usuario inválido, se permite como minimo 5 caracteres en el nombre de usuario")
+                    email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+                    if not re.match(email_regex, self.CambioEmail):
+                        self.newUser.warning_2.setText("El correo electrónico ingresado no es válido")
                     else:
-                        if len(self.CambioUser)>8:
-                            self.newUser.warning_2.setText("Usuario inválido, se permite como maximo 8 caracteres en el nombre de usuario")
+                        if len(self.CambioUser)<5:
+                            self.newUser.warning_2.setText("Usuario inválido, se permite como minimo 5 caracteres en el nombre de usuario")
                         else:
-                            if len(self.CambioCelu) != 9:
-                                self.newUser.warning_2.setText("El numero de telefono ingresado no es válido, debe tener 9 digitos")
+                            if len(self.CambioUser)>8:
+                                self.newUser.warning_2.setText("Usuario inválido, se permite como maximo 8 caracteres en el nombre de usuario")
                             else:
-                                password_regex = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$'
-                                if not re.match(password_regex, self.CambioPass):
-                                    self.newUser.warning_2.setText("La contraseña debe tener al menos 8 caracteres, incluir letras, números y al menos un carácter especial")
+                                if len(self.CambioCelu) != 9:
+                                    self.newUser.warning_2.setText("El numero de telefono ingresado no es válido, debe tener 9 digitos")
                                 else:
-                                    DataUpdateUser = UsuariosModel.UsuariosCLASS(self.objUsuario[1], self.objUsuario[2], self.objUsuario[3], self.objUsuario[4], self.objUsuario[7], self.objUsuario[8], self.objUsuario[6], self.objUsuario[5], self.objUsuario[9], self.objUsuario[10])
-                                    DataUpdateUser.Actualizar_Usuario(self.CambioUser, self.CambioPass, self.CambioCelu, self.CambioEmail, self.CambioCargo, self.CambioPermiso, self.objUsuario[0])
-                                    self.newUser.warning_2.setText("¡Datos del Usuario actualizados con éxito!")
-                                    self.BloquearTextoMod()
-                                    self.ListarUsuarios()
-                                    
+                                    password_regex = r'^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$'
+                                    if not re.match(password_regex, self.CambioPass):
+                                        self.newUser.warning_2.setText("La contraseña debe tener al menos 8 caracteres, incluir letras, números y al menos un carácter especial")
+                                    else:
+                                        DataUpdateUser = UsuariosModel.UsuariosCLASS(self.objUsuario[1], self.objUsuario[2], self.objUsuario[3], self.objUsuario[4], self.objUsuario[7], self.objUsuario[8], self.objUsuario[6], self.objUsuario[5], self.objUsuario[9], self.objUsuario[10])
+                                        DataUpdateUser.Actualizar_Usuario(self.CambioUser, self.CambioPass, self.CambioCelu, self.CambioEmail, self.CambioCargo, self.CambioPermiso, self.objUsuario[0])
+                                        self.newUser.warning_2.setText("¡Datos del Usuario actualizados con éxito!")
+                                        self.BloquearTextoMod()
+                                        self.ListarUsuarios()
+                                        self.newUser.tw_showUser.resizeColumnsToContents()
+                                        self.newUser.tw_showUser.setEditTriggers(QTableWidget.NoEditTriggers)
+        else:
+            self.newUser.warning_2.setText("¡Para modificar un usuario, primero seleccionalo en la tabla!")
         
-                    
-                
-            
+        
+                                    
     

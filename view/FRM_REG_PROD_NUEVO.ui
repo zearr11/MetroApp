@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>671</width>
-    <height>709</height>
+    <width>731</width>
+    <height>780</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>671</width>
-    <height>709</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -31,8 +31,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>671</width>
-      <height>711</height>
+      <width>731</width>
+      <height>781</height>
      </rect>
     </property>
     <property name="text">
@@ -48,7 +48,7 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>110</x>
       <y>10</y>
       <width>511</width>
       <height>81</height>
@@ -65,7 +65,7 @@ border-radius:13px</string>
    <widget class="QPushButton" name="bt_cancelar_prod">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>440</x>
       <y>20</y>
       <width>111</width>
       <height>61</height>
@@ -102,10 +102,10 @@ QPushButton:pressed {
      <string>Cancelar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_listar">
+   <widget class="QPushButton" name="bt_mod">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>180</x>
       <y>20</y>
       <width>111</width>
       <height>61</height>
@@ -139,13 +139,13 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="text">
-     <string>Listar</string>
+     <string>Modificar</string>
     </property>
    </widget>
    <widget class="QPushButton" name="bt_nuevo_prod">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>310</x>
       <y>20</y>
       <width>111</width>
       <height>61</height>
@@ -187,17 +187,17 @@ QPushButton:pressed {
      <rect>
       <x>5</x>
       <y>92</y>
-      <width>661</width>
-      <height>611</height>
+      <width>721</width>
+      <height>681</height>
      </rect>
     </property>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
        <x>5</x>
-       <y>11</y>
-       <width>651</width>
-       <height>591</height>
+       <y>21</y>
+       <width>711</width>
+       <height>641</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -211,8 +211,8 @@ border-radius:13px</string>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>435</x>
-       <y>61</y>
+       <x>483</x>
+       <y>109</y>
        <width>121</width>
        <height>131</height>
       </rect>
@@ -230,10 +230,10 @@ border-radius:13px</string>
     <widget class="QPushButton" name="bt_guardar">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>460</y>
-       <width>151</width>
-       <height>91</height>
+       <x>245</x>
+       <y>571</y>
+       <width>231</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="font">
@@ -264,16 +264,15 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>Guardar
-Producto</string>
+      <string>Guardar Producto</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="CB_2">
      <property name="geometry">
       <rect>
-       <x>32</x>
-       <y>50</y>
-       <width>301</width>
+       <x>47</x>
+       <y>40</y>
+       <width>331</width>
        <height>101</height>
       </rect>
      </property>
@@ -304,7 +303,7 @@ QComboBox {
        <rect>
         <x>20</x>
         <y>42</y>
-        <width>261</width>
+        <width>291</width>
         <height>41</height>
        </rect>
       </property>
@@ -342,9 +341,9 @@ QComboBox::hover{
     <widget class="QGroupBox" name="CB_3">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>468</y>
-       <width>381</width>
+       <x>47</x>
+       <y>420</y>
+       <width>331</width>
        <height>111</height>
       </rect>
      </property>
@@ -375,7 +374,7 @@ QComboBox {
        <rect>
         <x>25</x>
         <y>42</y>
-        <width>331</width>
+        <width>291</width>
         <height>41</height>
        </rect>
       </property>
@@ -413,8 +412,8 @@ QComboBox::hover{
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>375</x>
-       <y>25</y>
+       <x>423</x>
+       <y>73</y>
        <width>241</width>
        <height>231</height>
       </rect>
@@ -430,8 +429,8 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>385</x>
-       <y>177</y>
+       <x>433</x>
+       <y>225</y>
        <width>221</width>
        <height>81</height>
       </rect>
@@ -456,9 +455,9 @@ border-radius: 20px;</string>
     <widget class="QGroupBox" name="CB_1">
      <property name="geometry">
       <rect>
-       <x>32</x>
-       <y>171</y>
-       <width>301</width>
+       <x>47</x>
+       <y>150</y>
+       <width>331</width>
        <height>261</height>
       </rect>
      </property>
@@ -489,7 +488,7 @@ QComboBox {
        <rect>
         <x>35</x>
         <y>45</y>
-        <width>231</width>
+        <width>261</width>
         <height>51</height>
        </rect>
       </property>
@@ -519,7 +518,7 @@ padding-bottom:7px;</string>
        <rect>
         <x>35</x>
         <y>113</y>
-        <width>231</width>
+        <width>261</width>
         <height>51</height>
        </rect>
       </property>
@@ -544,12 +543,12 @@ padding-bottom:7px;</string>
        <string>Marca</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="le_stk_min">
+     <widget class="QLineEdit" name="le_stk">
       <property name="geometry">
        <rect>
         <x>35</x>
         <y>178</y>
-        <width>231</width>
+        <width>261</width>
         <height>51</height>
        </rect>
       </property>
@@ -578,8 +577,8 @@ padding-bottom:7px;</string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>389</x>
-       <y>42</y>
+       <x>437</x>
+       <y>90</y>
        <width>81</width>
        <height>81</height>
       </rect>
@@ -597,8 +596,8 @@ padding-bottom:7px;</string>
     <widget class="QGroupBox" name="CB_4">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>267</y>
+       <x>408</x>
+       <y>340</y>
        <width>271</width>
        <height>191</height>
       </rect>
@@ -690,9 +689,9 @@ QComboBox::hover{
      <widget class="QLineEdit" name="le_prec_prod">
       <property name="geometry">
        <rect>
-        <x>59</x>
+        <x>90</x>
         <y>100</y>
-        <width>151</width>
+        <width>141</width>
         <height>51</height>
        </rect>
       </property>
@@ -720,6 +719,55 @@ padding-bottom:7px;</string>
        <string>Ingrese Precio</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>47</x>
+        <y>108</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>19</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>S/.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="warning_1">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>530</y>
+       <width>691</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
     <zorder>label_4</zorder>
     <zorder>bt_guardar</zorder>
@@ -731,8 +779,9 @@ padding-bottom:7px;</string>
     <zorder>CB_4</zorder>
     <zorder>label_2</zorder>
     <zorder>label_5</zorder>
+    <zorder>warning_1</zorder>
    </widget>
-   <widget class="QWidget" name="wd_reg_listar" native="true">
+   <widget class="QWidget" name="wd_prod_mod" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -767,8 +816,8 @@ border-radius:13px</string>
      <rect>
       <x>0</x>
       <y>-1</y>
-      <width>671</width>
-      <height>711</height>
+      <width>731</width>
+      <height>781</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -780,14 +829,14 @@ border: 3px solid white; </string>
      <string/>
     </property>
    </widget>
+   <zorder>wd_prod_mod</zorder>
    <zorder>label</zorder>
-   <zorder>label_9</zorder>
    <zorder>label_3</zorder>
-   <zorder>bt_listar</zorder>
+   <zorder>wd_reg_produ</zorder>
+   <zorder>label_9</zorder>
    <zorder>bt_cancelar_prod</zorder>
    <zorder>bt_nuevo_prod</zorder>
-   <zorder>wd_reg_produ</zorder>
-   <zorder>wd_reg_listar</zorder>
+   <zorder>bt_mod</zorder>
   </widget>
  </widget>
  <resources>

@@ -887,7 +887,7 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>155</x>
-       <y>33</y>
+       <y>35</y>
        <width>511</width>
        <height>61</height>
       </rect>
@@ -916,7 +916,7 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>205</x>
-       <y>28</y>
+       <y>30</y>
        <width>411</width>
        <height>71</height>
       </rect>
@@ -938,9 +938,9 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>106</y>
+       <y>490</y>
        <width>761</width>
-       <height>251</height>
+       <height>281</height>
       </rect>
      </property>
      <property name="font">
@@ -963,67 +963,190 @@ color: white
         <x>25</x>
         <y>40</y>
         <width>711</width>
-        <height>191</height>
+        <height>221</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <family>Segoe UI,Arial,sans-serif</family>
+        <pointsize>10</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget, QTableView {
+            background-color: #f9f9f9;        /* Color de fondo de la tabla */
+            border: 1px solid #d3d3d3;        /* Borde de la tabla */
+            gridline-color: #e1e1e1;          /* Color de las líneas de la cuadrícula */
+            font-family: &quot;Segoe UI&quot;, Arial, sans-serif;  /* Fuente de la tabla */
+        }
+QHeaderView::section {
+            background-color: #A67C00;        /* Color de fondo de los encabezados (marrón oscuro) */
+            color: white;                     /* Color del texto de los encabezados */
+            padding: 4px;                     /* Espaciado dentro de los encabezados */
+            border: 1px solid #dddddd;        /* Borde de los encabezados */
+        }
+
+
+
+        QTableWidget::item, QTableView::item {
+            padding: 8px;                     /* Espaciado dentro de las celdas */
+            border: none;                     /* Sin bordes individuales en las celdas */
+        }
+
+        QTableWidget::item:selected, QTableView::item:selected {
+            background-color: #FFD700;        /* Color de fondo para las celdas seleccionadas (amarillo dorado) */
+            color: black;                     /* Color del texto para las celdas seleccionadas */
+        }
+
+        QTableWidget::item:hover, QTableView::item:hover {
+            background-color: #FFFACD;        /* Color de fondo para las celdas al pasar el cursor (amarillo claro) */
+            color: black;                     /* Color del texto para las celdas al pasar el cursor */
+        }
+
+        QScrollBar:vertical {
+            background-color: #f5f5f5;        /* Color de fondo del scrollbar vertical */
+            width: 12px;                      /* Ancho del scrollbar */
+            margin: 0px 0px 0px 0px;
+        }
+
+        QScrollBar::handle:vertical {
+            background-color: #c0c0c0;        /* Color del 'handle' del scrollbar */
+            min-height: 20px;
+            border-radius: 5px;               /* Bordes redondeados */
+        }
+
+        QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+            background-color: #d3d3d3;
+            height: 0px;                      /* Oculta las líneas de los extremos */
+        }
+
+        QScrollBar:horizontal {
+            background-color: #f5f5f5;        /* Color de fondo del scrollbar horizontal */
+            height: 12px;                     /* Altura del scrollbar */
+            margin: 0px 0px 0px 0px;
+        }
+
+        QScrollBar::handle:horizontal {
+            background-color: #c0c0c0;        /* Color del 'handle' del scrollbar */
+            min-width: 20px;
+            border-radius: 5px;               /* Bordes redondeados */
+        }
+
+        QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+            background-color: #d3d3d3;
+            width: 0px;                       /* Oculta las líneas de los extremos */
+        }
+
+</string>
       </property>
       <column>
        <property name="text">
         <string>idUser</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Usuario</string>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Contraseña</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Nombres</string>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Apellidos</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>TipoDocumento</string>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>NumeroDocumento</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Celular</string>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Email</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
       <column>
        <property name="text">
         <string>Cargo</string>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
       </column>
       <column>
        <property name="text">
         <string>Permisos</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
        </property>
       </column>
      </widget>
@@ -1032,7 +1155,7 @@ color: white
      <property name="geometry">
       <rect>
        <x>650</x>
-       <y>23</y>
+       <y>25</y>
        <width>81</width>
        <height>81</height>
       </rect>
@@ -1054,7 +1177,7 @@ color: white
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>370</y>
+       <y>121</y>
        <width>761</width>
        <height>351</height>
       </rect>
@@ -1071,7 +1194,7 @@ color: white
 </string>
      </property>
      <property name="title">
-      <string>Informacion de Usuario seleccionado</string>
+      <string>Informacion</string>
      </property>
      <widget class="QLabel" name="label_17">
       <property name="geometry">
@@ -1528,7 +1651,7 @@ QComboBox::hover{
      <widget class="QPushButton" name="pb_actualizar">
       <property name="geometry">
        <rect>
-        <x>285</x>
+        <x>175</x>
         <y>282</y>
         <width>191</width>
         <height>51</height>
@@ -1561,55 +1684,13 @@ QPushButton:pressed {
 }</string>
       </property>
       <property name="text">
-       <string>Guardar</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pb_nuevo">
-      <property name="geometry">
-       <rect>
-        <x>65</x>
-        <y>282</y>
-        <width>191</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>13</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-        <underline>false</underline>
-        <strikeout>false</strikeout>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(255, 255, 0);
-}
-
-
-
-QPushButton:pressed {
-	
-	background-color: rgb(255, 227, 14);
-}</string>
-      </property>
-      <property name="text">
-       <string>Nuevo</string>
+       <string>Guardar Cambios</string>
       </property>
      </widget>
      <widget class="QPushButton" name="bt_cancelar_cl">
       <property name="geometry">
        <rect>
-        <x>505</x>
+        <x>395</x>
         <y>282</y>
         <width>191</width>
         <height>51</height>
@@ -1650,8 +1731,8 @@ QPushButton:pressed {
     <widget class="QLabel" name="warning_2">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>730</y>
+       <x>35</x>
+       <y>97</y>
        <width>751</width>
        <height>41</height>
       </rect>

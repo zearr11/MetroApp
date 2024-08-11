@@ -1,4 +1,5 @@
 from model.HerenciasModel import CategoriaCLASS, EstadoCLASS, MedidaVentaCLASS
+from dao import CategoriaDao, MedidaVentaDao, EstadoDao, ProductoDao
 
 
 class ProductoCLASS(CategoriaCLASS, EstadoCLASS, MedidaVentaCLASS):
@@ -38,3 +39,30 @@ class ProductoCLASS(CategoriaCLASS, EstadoCLASS, MedidaVentaCLASS):
     def get_Precio(self):
         return self.__Precio
     
+    def Nuevo_Producto(self):
+        Descripcion = self.get_Descripcion()
+        Marca = self.get_Marca()
+        Cantidad = self.get_Cantidad()
+        MedidaVenta = self.get_MedidaVenta()
+        Precio = self.get_Precio()
+        Estado = self.get_Estado()
+        TipoCategoria = self.get_TipoCategoria()
+        
+        objCategoria = CategoriaDao.CategoriaBD()
+        objMedida = MedidaVentaDao.MedidaVentaBD()
+        objEstado = EstadoDao.EstadoBD()
+        objProducto = ProductoDao.ProductoBD()
+        
+        #ObtenerID de Categoria
+        idCat = objCategoria.ObtenerCategoriaID(TipoCategoria)
+        
+        #ObtenerID de Medida de Venta
+        idMedVent = objMedida.ObtenerMedidaVentaID(MedidaVenta)
+        
+        #ObtenerID de Estado
+        idEstd = objEstado.ObtenerEstadoID(Estado)
+        
+        #Insert de Nuevo Producto en Tabla Producto
+        objProducto.InsertTablaProducto(Descripcion, Marca, Cantidad, Precio, idMedVent, idEstd, idCat)
+        
+

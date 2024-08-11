@@ -209,7 +209,7 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>95</x>
-       <y>319</y>
+       <y>340</y>
        <width>191</width>
        <height>81</height>
       </rect>
@@ -285,52 +285,11 @@ QPushButton:pressed {
       <string>Cancelar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_deleteUser">
-     <property name="geometry">
-      <rect>
-       <x>95</x>
-       <y>409</y>
-       <width>191</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Eliminar 
-Usuario</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="bt_editUser">
      <property name="geometry">
       <rect>
        <x>95</x>
-       <y>502</y>
+       <y>440</y>
        <width>191</width>
        <height>81</height>
       </rect>
@@ -375,7 +334,6 @@ Usuario</string>
     <zorder>label_7</zorder>
     <zorder>bt_crearUser</zorder>
     <zorder>bt_cancelar</zorder>
-    <zorder>bt_deleteUser</zorder>
     <zorder>bt_editUser</zorder>
    </widget>
   </widget>
