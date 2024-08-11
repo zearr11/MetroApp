@@ -65,4 +65,31 @@ class UsuariosCLASS(PersonaCLASS, CargoCLASS, PermisosCLASS):
         
         #Insert en Tabla Usuario y Finalizacion del Registro
         DaoUsuario.InsertTablaUser(Usuario, Password, idCargo, idPermisos, idPersona, idContacto, idNumeroDocumento, idTipoDocumento)
+        
+    def Actualizar_Usuario(self, userNew, paswNew, celNew, emaNew, cargoNew, permisoNew, idU):
+        Usuario = self.get_NombUser()
+        Password = self.get_Password()
+        Nombres = self.get_Nombres()
+        Apellidos = self.get_Apellidos()
+        Tipo_Doc = self.get_TipoDoc()
+        Numero_Doc = self.get_NumeroDoc()
+        Celular = self.get_Telefono()
+        Email = self.get_Email()
+        Cargo = self.get_TipoCargo()
+        Permiso = self.get_TipoPermiso()
+        
+        DaoCargo = CargoDao.CargoBD()
+        DaoPermiso = PermisoDao.PermisoBD()
+        DaoContacto = ContactoDao.ContactoBD()
+        DaoUsuario = UsuarioDao.UsuarioBD()
+        
+        #ObtencionID's Principales
+        idContacto = DaoContacto.ObtenerContactoID(Celular, Email)
+        idCargo = DaoCargo.ObtenerCargoID(cargoNew)
+        idPermisos = DaoPermiso.ObtenerPermisoID(permisoNew)
+        
+        DaoContacto.UpdateContacto(celNew, emaNew, idContacto)
+        DaoUsuario.UpdateUsuario(userNew, paswNew, idCargo, idPermisos, idU)
+        
+        
     

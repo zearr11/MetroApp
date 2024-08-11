@@ -20,4 +20,12 @@ class ContactoBD:
         nbd.conexionBD.commit()
         cursor.close()
         
+    def UpdateContacto(self, Telefono, Email, idContacto):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        query = "UPDATE contacto SET Telefono = '{}', Email ='{}' WHERE idContacto = '{}'".format(Telefono, Email, idContacto)
+        cursor.execute(query)
+        nbd.conexionBD.commit()
+        cursor.close()
+        
         
