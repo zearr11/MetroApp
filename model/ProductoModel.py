@@ -65,4 +65,25 @@ class ProductoCLASS(CategoriaCLASS, EstadoCLASS, MedidaVentaCLASS):
         #Insert de Nuevo Producto en Tabla Producto
         objProducto.InsertTablaProducto(Descripcion, Marca, Cantidad, Precio, idMedVent, idEstd, idCat)
         
+        
+    def Actualizar_Producto(self, ndesc, nmarc, nprec, ncan, nmed, nestad, ncat, idProd):
+        
+        objCategoria = CategoriaDao.CategoriaBD()
+        objMedida = MedidaVentaDao.MedidaVentaBD()
+        objEstado = EstadoDao.EstadoBD()
+        objProducto = ProductoDao.ProductoBD()
+        
+        #ObtenerID de Categoria
+        idCat = objCategoria.ObtenerCategoriaID(ncat)
+        
+        #ObtenerID de Medida de Venta
+        idMedVent = objMedida.ObtenerMedidaVentaID(nmed)
+        
+        #ObtenerID de Estado
+        idEstd = objEstado.ObtenerEstadoID(nestad)
+        
+        #Update en Tabla Producto
+        objProducto.UpdateProducto(ndesc, nmarc, ncan, nprec, idMedVent, idEstd, idCat, idProd)
+        
+        
 
