@@ -4,7 +4,7 @@ from dao import	TipoDocumentoDao, CargoDao, PermisoDao, NumeroDocumentoDao, Cont
 
 class UsuariosCLASS(PersonaCLASS, CargoCLASS, PermisosCLASS):
     
-    def __init__(self, NombUser, Password, Nombres, Apellidos, Telefono, Email, NumeroDoc, TipoDoc, TipoCargo, TipoPermiso):
+    def __init__(self, NombUser="", Password="", Nombres="", Apellidos="", Telefono="", Email="", NumeroDoc="", TipoDoc="", TipoCargo="", TipoPermiso=""):
         super().__init__(Nombres, Apellidos, Telefono, Email, NumeroDoc, TipoDoc)
         CargoCLASS.__init__(self, TipoCargo)
         PermisosCLASS.__init__(self, TipoPermiso)

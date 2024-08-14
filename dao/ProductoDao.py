@@ -25,6 +25,13 @@ class ProductoBD:
         cursor.execute(ObtenerProducto)
         return cursor.fetchone()
     
+    def ObtenerProducto2(self, Descripcion):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerProducto2 = "SELECT c.idProducto, c.Descripcion, c.Marca, i.MedidaVenta, c.Precio FROM producto c INNER JOIN medidaventa i ON c.MedidaVenta_idMedidaVenta = i.idMedidaVenta WHERE  c.Estado_idEstado = 2 AND c.Descripcion = '{}'".format(Descripcion)
+        cursor.execute(ObtenerProducto2)
+        return cursor.fetchone()
+    
     def UpdateProducto(self, Descripcion, Marca, Cantidad, Precio, idMedidaVenta, idEstado, idCategoria, idProducto):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
@@ -32,3 +39,10 @@ class ProductoBD:
         cursor.execute(query)
         nbd.conexionBD.commit()
         cursor.close()
+        
+    def DataProducto(self):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        cursor.execute("SELECT Descripcion FROM producto WHERE Estado_idEstado = 2")
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]

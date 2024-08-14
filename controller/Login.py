@@ -2,6 +2,7 @@ from PyQt5 import uic
 from view_img import Recursos
 from dao import LoginDao
 from controller import MenuPrincipal
+from model import LogUsersModel
 
 
 class LoginFRM:
@@ -27,6 +28,11 @@ class LoginFRM:
             else:
                 PruebaLog = LoginDao.LoginBD()
                 if PruebaLog.ConsultaLogin(user, passw) == True:
+                    #
+                    idU = PruebaLog.ObtenerUsuarioLogin(user, passw)
+                    Acceso = LogUsersModel.LogUsersModelCLASS(idU)
+                    Acceso.LogsEnAppInsert()
+                    #
                     self.log.close()
                     self.InicioMenu = MenuPrincipal.MenuFRM()
                     

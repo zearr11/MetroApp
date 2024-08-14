@@ -66,282 +66,6 @@ border: 3px solid white; </string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="wd_regUser" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>-1</y>
-      <width>791</width>
-      <height>641</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>20</y>
-       <width>741</width>
-       <height>601</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgba(0,0,0,35);
-border-radius:13px</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>208</y>
-       <width>251</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generar Documento &lt;/p&gt;&lt;p&gt;de Venta&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="scaledContents">
-      <bool>false</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>324</x>
-       <y>59</y>
-       <width>141</width>
-       <height>141</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../view_img/boleta.jpg</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>false</bool>
-     </property>
-     <property name="margin">
-      <number>-10</number>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>50</y>
-       <width>81</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/image/IMG/metrologo.png);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../view_img/metrologo.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>37</y>
-       <width>251</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:00715909, stop:0 rgba(0, 0, 0, 20), stop:0.375 rgba(0, 0, 0, 50), stop:0.835227 rgba(0, 0, 0, 75));
-border-radius: 20px;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>185</x>
-       <y>316</y>
-       <width>421</width>
-       <height>111</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgba(0,0,0,35);
-border-radius:13px</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_nuevo_regUser">
-     <property name="geometry">
-      <rect>
-       <x>229</x>
-       <y>330</y>
-       <width>131</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Registrar 
-Boleta</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_cancelar_regUser">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>520</y>
-       <width>121</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(255, 0, 0);
-}
-
-QPushButton:pressed {
-	background-color: rgb(166, 0, 0);
-}</string>
-     </property>
-     <property name="text">
-      <string>Cancelar</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_nuevo_regUser_2">
-     <property name="geometry">
-      <rect>
-       <x>431</x>
-       <y>330</y>
-       <width>131</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Registrar 
-Factura</string>
-     </property>
-    </widget>
-    <zorder>label_4</zorder>
-    <zorder>label_6</zorder>
-    <zorder>label_3</zorder>
-    <zorder>label_2</zorder>
-    <zorder>label_7</zorder>
-    <zorder>bt_nuevo_regUser</zorder>
-    <zorder>bt_cancelar_regUser</zorder>
-    <zorder>bt_nuevo_regUser_2</zorder>
-    <zorder>label_5</zorder>
-   </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
@@ -355,9 +79,9 @@ Factura</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>25</y>
+       <y>10</y>
        <width>751</width>
-       <height>591</height>
+       <height>621</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -368,11 +92,11 @@ border-radius:13px</string>
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="label_9">
+    <widget class="QLabel" name="bol_fact">
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>45</y>
+       <y>34</y>
        <width>491</width>
        <height>41</height>
       </rect>
@@ -388,7 +112,7 @@ border-radius:13px</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>Boleta de Venta Electronica</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -398,7 +122,7 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>149</x>
-       <y>80</y>
+       <y>59</y>
        <width>491</width>
        <height>101</height>
       </rect>
@@ -423,8 +147,8 @@ border-radius:13px</string>
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>540</y>
+       <x>210</x>
+       <y>500</y>
        <width>371</width>
        <height>41</height>
       </rect>
@@ -446,13 +170,13 @@ border-radius:13px</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_cancelar_vent">
+    <widget class="QPushButton" name="bt_retornoMenu">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>521</y>
-       <width>111</width>
-       <height>81</height>
+       <x>290</x>
+       <y>550</y>
+       <width>221</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -483,58 +207,14 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>Retornar
-al Menu
-Principal</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_nuevo_vent">
-     <property name="geometry">
-      <rect>
-       <x>590</x>
-       <y>521</y>
-       <width>111</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Nuevo 
-Registro 
-de Venta</string>
+      <string>Retornar al Menu Principal</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_31">
      <property name="geometry">
       <rect>
        <x>89</x>
-       <y>59</y>
+       <y>30</y>
        <width>101</width>
        <height>101</height>
       </rect>
@@ -556,7 +236,7 @@ de Venta</string>
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>179</y>
+       <y>158</y>
        <width>711</width>
        <height>331</height>
       </rect>
@@ -600,7 +280,7 @@ color: white
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label_21">
+      <widget class="QLabel" name="totalt">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -620,7 +300,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S/30030&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -675,7 +355,7 @@ color: white
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label_18">
+      <widget class="QLabel" name="lb_fcha">
        <property name="geometry">
         <rect>
          <x>58</x>
@@ -695,7 +375,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;01/01/2024&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -728,49 +408,6 @@ color: white
        </property>
       </widget>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>70</y>
-        <width>671</width>
-        <height>171</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <column>
-       <property name="text">
-        <string>Cantidad</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>U.M</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Codigo</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Descripcion</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Precio U.</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Total</string>
-       </property>
-      </column>
-     </widget>
      <widget class="QGroupBox" name="groupBox_3">
       <property name="geometry">
        <rect>
@@ -793,7 +430,7 @@ color: white
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label_19">
+      <widget class="QLabel" name="subt">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -813,7 +450,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S/30000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -894,7 +531,7 @@ color: white
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_12">
+      <widget class="QLabel" name="n_user">
        <property name="geometry">
         <rect>
          <x>58</x>
@@ -914,13 +551,13 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cesar Junior Gamarra Rivera&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_15">
+      <widget class="QLabel" name="n_boleta">
        <property name="geometry">
         <rect>
          <x>80</x>
@@ -940,7 +577,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;123891302103821&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -995,7 +632,7 @@ color: white
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label_20">
+      <widget class="QLabel" name="igvt">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -1015,7 +652,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;S/30&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1096,7 +733,7 @@ color: white
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_28">
+      <widget class="QLabel" name="n_cliente">
        <property name="geometry">
         <rect>
          <x>62</x>
@@ -1116,13 +753,13 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jorge Antonio Lopez Rodriguez&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_29">
+      <widget class="QLabel" name="dni_cliente">
        <property name="geometry">
         <rect>
          <x>62</x>
@@ -1142,7 +779,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;75829102&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1197,10 +834,10 @@ color: white
       <property name="title">
        <string/>
       </property>
-      <widget class="QLabel" name="label_22">
+      <widget class="QLabel" name="pago">
        <property name="geometry">
         <rect>
-         <x>58</x>
+         <x>52</x>
          <y>0</y>
          <width>81</width>
          <height>41</height>
@@ -1217,7 +854,7 @@ color: white
         <string notr="true">color: white</string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CREDITO&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1226,7 +863,7 @@ color: white
       <widget class="QLabel" name="label_27">
        <property name="geometry">
         <rect>
-         <x>14</x>
+         <x>11</x>
          <y>0</y>
          <width>31</width>
          <height>41</height>
@@ -1249,6 +886,111 @@ color: white
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
+     </widget>
+     <widget class="QTableWidget" name="tw_venta">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>671</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 1px solid #d6d9dc;
+    background-color: #f9fafb;
+    gridline-color: #e6e9ec;
+    alternate-background-color: #f1f3f4;
+}
+
+QHeaderView::section {
+    background-color: #e6e9ec;
+    padding: 4px;
+    border: 1px solid #d6d9dc;
+    font-weight: bold;
+    color: #333333;
+}
+
+QTableWidget::item {
+    border: 1px solid #d6d9dc;
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #d6d9dc;
+    color: #333333;
+}</string>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>Id</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Descripción</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Marca</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Medida</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Precio</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cantidad</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Total</string>
+       </property>
+      </column>
      </widget>
     </widget>
    </widget>

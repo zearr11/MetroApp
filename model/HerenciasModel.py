@@ -140,9 +140,3 @@ class MedidaVentaCLASS:
     def get_MedidaVenta(self):
         return self.__MedidaVenta
     
-    
-#11
-class VentaCLASS(NumeroDocumentoCLASS, MedioPagoCLASS):
-    def __init__(self, TipoPago, NumeroDoc, TipoDoc):
-        super().__init__(NumeroDoc, TipoDoc)
-        MedioPagoCLASS.__init__(self, TipoPago)

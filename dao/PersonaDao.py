@@ -12,12 +12,19 @@ class PersonaBD:
         objPersona = objPersonaID[0]
         return objPersona
     
-        
     def InsertTablaPersona(self,Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento):
         nbd = ConexionBD.ConectBaseData()
         cursor = nbd.conexionBD.cursor()
         Insert = "insert into persona(Nombres, Apellidos, Contacto_idContacto, NumeroDocumento_idNumeroDocumento, NumeroDocumento_TipoDocumento_idTipoDocumento) values('{}', '{}', '{}', '{}', '{}')".format(Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento)
         cursor.execute(Insert)
+        nbd.conexionBD.commit()
+        cursor.close()
+        
+    def UpdatePersona(self, Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento, idPersona):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        query = "UPDATE persona SET Nombres = '{}', Apellidos = '{}', Contacto_idContacto = '{}', NumeroDocumento_idNumeroDocumento = '{}', NumeroDocumento_TipoDocumento_idTipoDocumento = '{}' where idPersona = '{}'".format(Nombres, Apellidos, idContacto, idNumeroDocumento, idTipoDocumento, idPersona)
+        cursor.execute(query)
         nbd.conexionBD.commit()
         cursor.close()
         
