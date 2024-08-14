@@ -11,40 +11,83 @@ class RegVentaFRM:
     def __init__(self):
         self.newVenta = uic.loadUi("view/FRM_REG_VENTA.ui")
         self.newVenta.setWindowTitle("Gestion de Ventas")
+        
+        
+        self.HideWidgets()
+
+        #
+        self.ConnectNumeroDocumentoClientes = ClienteDao.ClienteBD()
+        self.ConnectMedioPago = MedioPagoDao.MedioPagoBD()
+        self.ConnectTipoDocVenta = TipoDocVentaDao.TipoDocVentaBD()
+        self.ConnectProducto = ProductoDao.ProductoBD()
+        #
+        self.DtNumeroDocumento = self.ConnectNumeroDocumentoClientes.ObtenerNumeroDocumentoCliente()
+        self.DtMedioPago = self.ConnectMedioPago.DataMedioPago()
+        self.DtProducto = self.ConnectProducto.DataProducto()
+        self.DtDocVenta = self.ConnectTipoDocVenta.DataTipoDocVenta()
+        
+        self.newVenta.bt_cancelar_vent.clicked.connect(self.CancelarProduct)
+        self.newVenta.bt_nuevo_vent.clicked.connect(self.btNuevo)
+        self.newVenta.bt_listar_vent.clicked.connect(self.btListar)
+        ###
+        self.newVenta.tw_regVent.cellClicked.connect(self.ClickTblVentas)
+        ###
+        self.newVenta.bt_add_prod_vent.clicked.connect(self.AgregarProducto)
+        self.newVenta.bt_clear_reg_vent.clicked.connect(self.LimpiarRegistro)
+        self.newVenta.bt_guardar_vent.clicked.connect(self.GuardadoVenta)
+        self.newVenta.show()
+    ########################################################################################################
+    #Funciones Principales del FRM
+    
+    def HideWidgets(self):
+        self.newVenta.window_1_venta.hide()
+        self.newVenta.window_2_list.hide()
+    
+    def ShowWidget(self, prmtro):
+        if prmtro == self.newVenta.window_1_venta:
+            if self.newVenta.window_1_venta.isVisible():
+                pass
+            else:
+                self.HideWidgets()
+                prmtro.show()
+                self.RegistroActivacion()
+        else:
+            if prmtro == self.newVenta.window_2_list:
+                if self.newVenta.window_2_list.isVisible():
+                    pass
+                else:
+                    self.HideWidgets()
+                    prmtro.show()
+                    self.ListarActivacion()
+                    
+    def RegistroActivacion(self):
         self.ListaProductosAdquiridos = []
         self.ObjProductoID = []
         self.ObjCantidadProd = []
         self.ObjPrecioTxProd = []
         self.TotalT = 0
-
-        #
-        self.ConnectNumeroDocumentoClientes = ClienteDao.ClienteBD()
-        self.ConnectMedioPago = MedioPagoDao.MedioPagoBD()
-        self.ConnectTipoDocVenta = TipoDocVentaDao.TipoDocVentaBD()##############
-        self.ConnectProducto = ProductoDao.ProductoBD()
-        
-        DtNumeroDocumento = self.ConnectNumeroDocumentoClientes.ObtenerNumeroDocumentoCliente()
-        DtMedioPago = self.ConnectMedioPago.DataMedioPago()
-        DtProducto = self.ConnectProducto.DataProducto()
-        DtDocVenta = self.ConnectTipoDocVenta.DataTipoDocVenta()###############
-        
-        self.newVenta.cb_tipoDNI_vent.addItems(DtNumeroDocumento)
-        self.newVenta.cb_medioP_vent.addItems(DtMedioPago)
-        self.newVenta.cb_product_vent.addItems(DtProducto)
-        self.newVenta.cb_tipodoc_vent.addItems(DtDocVenta)######################
+        self.newVenta.cb_tipoDNI_vent.addItems(self.DtNumeroDocumento)
+        self.newVenta.cb_medioP_vent.addItems(self.DtMedioPago)
+        self.newVenta.cb_product_vent.addItems(self.DtProducto)
+        self.newVenta.cb_tipodoc_vent.addItems(self.DtDocVenta)
         self.newVenta.cb_tipoDNI_vent.setCurrentText("")
         self.newVenta.cb_product_vent.setCurrentText("")
-        #
-        self.newVenta.tw_venta.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)#OCUPACION DE TABLA COMPLETA
+        self.newVenta.tw_venta.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch) #OCUPACION DE TABLA COMPLETA
         
-        self.newVenta.bt_cancelar_vent.clicked.connect(self.CancelarProduct)
-        self.newVenta.bt_add_prod_vent.clicked.connect(self.AgregarProducto)
-        self.newVenta.bt_clear_reg_vent.clicked.connect(self.LimpiarRegistro)
-        self.newVenta.bt_guardar_vent.clicked.connect(self.GuardadoVenta)
-        self.newVenta.show()
+    def ListarActivacion(self):
+        self.LlenadoTabla()
         
     #########################################################################################################
-    #BOTONES PRINCIPALES  
+    #BOTONES MENU INICIAL
+    
+    def btNuevo(self):
+        self.ShowWidget(self.newVenta.window_1_venta)
+        
+    def btListar(self):
+        self.ShowWidget(self.newVenta.window_2_list)
+    
+    #########################################################################################################
+    #BOTONES REG VENTA  
     def CancelarProduct(self):
         self.newVenta.close()
         self.menu = MenuPrincipal.MenuFRM()
@@ -72,7 +115,6 @@ class RegVentaFRM:
     
     
     def GuardadoVenta(self):   
-        from controller import DocVentaBolFact
         if len(self.ListaProductosAdquiridos) == 0:
             self.newVenta.warning_regvent.setText("¡Para registrar la venta debes agregar productos!")
         else:
@@ -221,3 +263,46 @@ class RegVentaFRM:
     def MostradoDocumento(self):
         self.newVenta.close()
         self.docventa = DocVentaBolFact.DocVentaBolFactFRM()
+        
+    ###############################################################################################
+    #Listar Ventas
+    
+    def LlenadoTabla(self):
+        ConnectVentaDao = VentaDao.VentaBD()
+        TbVentas = ConnectVentaDao.ConsultaTablaVentas()
+        Cantidad = len(TbVentas)
+        self.newVenta.tw_regVent.verticalHeader().setVisible(False)
+        self.newVenta.tw_regVent.setRowCount(Cantidad)
+        Fila = 0
+        for obj in TbVentas:
+            self.newVenta.tw_regVent.setItem(Fila, 0, QTableWidgetItem(str(obj[0])))
+            self.newVenta.tw_regVent.setItem(Fila, 1, QTableWidgetItem((obj[1]+" "+(obj[2]))))
+            self.newVenta.tw_regVent.setItem(Fila, 2, QTableWidgetItem(str(obj[3])))
+            if obj[4] == "Boleta":
+                self.newVenta.tw_regVent.setItem(Fila, 3, QTableWidgetItem("BOL-"+obj[5]))
+            else:
+                if obj[4] == "Factura":
+                    self.newVenta.tw_regVent.setItem(Fila, 3, QTableWidgetItem("FAC-"+obj[5]))
+            self.newVenta.tw_regVent.setItem(Fila, 4, QTableWidgetItem((obj[6]+" "+obj[7])))
+            self.newVenta.tw_regVent.setItem(Fila, 5, QTableWidgetItem(obj[8]))
+            self.newVenta.tw_regVent.setItem(Fila, 6, QTableWidgetItem("S/ "+str(obj[9])))
+            Fila +=1
+            
+        for row in range(self.newVenta.tw_regVent.rowCount()):
+            for column in range(self.newVenta.tw_regVent.columnCount()):
+                item = self.newVenta.tw_regVent.item(row, column)
+                if item:
+                    item.setTextAlignment(Qt.AlignCenter)
+        
+        self.newVenta.tw_regVent.resizeColumnsToContents()
+        self.newVenta.tw_regVent.setEditTriggers(QTableWidget.NoEditTriggers)
+        
+    def ClickTblVentas(self, fila):
+        idVenta = self.newVenta.tw_regVent.item(fila, 0).text()
+        self.newVenta.close()
+        self.docventa = DocVentaBolFact.DocVentaBolFactFRM(idVenta)
+        
+        
+        
+        
+                

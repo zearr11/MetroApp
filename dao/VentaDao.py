@@ -34,3 +34,11 @@ class VentaBD:
         DtaVenta = "SELECT p_u.Nombres,p_u.Apellidos,dv.NumeroDocumentoVenta,p_c.Nombres,p_c.Apellidos,nd.NumeroDoc,ve.Fecha,l.TipoPago,wa.TipoDocVenta,dv.Subtotal,dv.IGV,dv.TotalCancelado FROM venta ve INNER JOIN usuario u ON ve.Usuario_idUsuario=u.idUsuario INNER JOIN persona p_u ON u.Persona_idPersona=p_u.idPersona INNER JOIN documentodeventa dv ON ve.DocumentodeVenta_idDocumentodeVenta=dv.idDocumentodeVenta INNER JOIN mediopago l ON ve.MedioPago_idMedioPago=l.idMedioPago INNER JOIN cliente c ON ve.Cliente_idCliente=c.idCliente INNER JOIN persona p_c ON c.Persona_idPersona=p_c.idPersona INNER JOIN numerodocumento nd ON p_c.NumeroDocumento_idNumeroDocumento=nd.idNumeroDocumento INNER JOIN tipodocventa wa ON wa.idTipoDocVenta=dv.TipoDocVenta_idTipoDocVenta WHERE ve.idVenta='{}'".format(idVenta)
         cursor.execute(DtaVenta)
         return cursor.fetchone()
+    
+    def ConsultaTablaVentas(self):#
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerTablaVentas = "SELECT ve.idVenta, p_u.Nombres,p_u.Apellidos,ve.Fecha,wa.TipoDocVenta,dv.NumeroDocumentoVenta,p_c.Nombres,p_c.Apellidos,l.TipoPago,dv.TotalCancelado FROM venta ve INNER JOIN usuario u ON ve.Usuario_idUsuario=u.idUsuario INNER JOIN persona p_u ON u.Persona_idPersona=p_u.idPersona INNER JOIN documentodeventa dv ON ve.DocumentodeVenta_idDocumentodeVenta=dv.idDocumentodeVenta INNER JOIN mediopago l ON ve.MedioPago_idMedioPago=l.idMedioPago INNER JOIN cliente c ON ve.Cliente_idCliente=c.idCliente INNER JOIN persona p_c ON c.Persona_idPersona=p_c.idPersona INNER JOIN numerodocumento nd ON p_c.NumeroDocumento_idNumeroDocumento=nd.idNumeroDocumento INNER JOIN tipodocventa wa ON wa.idTipoDocVenta=dv.TipoDocVenta_idTipoDocVenta order by ve.idVenta asc"
+        cursor.execute(ObtenerTablaVentas)
+        return cursor.fetchall()
+        

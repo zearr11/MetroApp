@@ -966,13 +966,243 @@ QComboBox::hover{
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="window_2_list" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>97</y>
+      <width>1031</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>5</y>
+       <width>991</width>
+       <height>651</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="GB_2_CLIENT_6">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>100</y>
+       <width>841</width>
+       <height>531</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Selecciona para ver mas detalles</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <widget class="QTableWidget" name="tw_regVent">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>781</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 1px solid #d6d9dc;
+    background-color: #f9fafb;
+    gridline-color: #e6e9ec;
+    alternate-background-color: #f1f3f4;
+}
+
+QHeaderView::section {
+    background-color: #e6e9ec;
+    padding: 4px;
+    border: 1px solid #d6d9dc;
+    font-weight: bold;
+    color: #333333;
+}
+
+QTableWidget::item {
+    border: 1px solid #d6d9dc;
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #d6d9dc;
+    color: #333333;
+}</string>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>true</bool>
+      </property>
+      <column>
+       <property name="text">
+        <string>IdVenta</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Vendedor</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Fecha</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cod</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cliente</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MedioPago</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>TotalVenta</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>20</y>
+       <width>371</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bol_fact">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>30</y>
+       <width>851</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>19</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white</string>
+     </property>
+     <property name="text">
+      <string>Registro de Venta</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_3</zorder>
    <zorder>label_9</zorder>
-   <zorder>window_1_venta</zorder>
    <zorder>bt_cancelar_vent</zorder>
    <zorder>bt_nuevo_vent</zorder>
    <zorder>bt_listar_vent</zorder>
+   <zorder>window_1_venta</zorder>
+   <zorder>window_2_list</zorder>
   </widget>
  </widget>
  <resources>

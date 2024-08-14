@@ -4,10 +4,10 @@ from PyQt5.QtWidgets import QTableWidgetItem
 from controller import MenuPrincipal
 
 class DocVentaBolFactFRM:
-    def __init__(self):
+    def __init__(self, idVenta=""):
         self.docventa = uic.loadUi("view/FRM_DOC_VENTA.ui")
         self.docventa.setWindowTitle("Documento de Venta")
-        
+        self.idVentaINIT = idVenta
         self.VentaDao = VentaDao.VentaBD()
         self.DocVentDao = DocumentoDeVentaDao.DocumentodeVentaCLASS()
         self.TipoDocVentaDao = TipoDocVentaDao.TipoDocVentaBD()
@@ -19,10 +19,14 @@ class DocVentaBolFactFRM:
         self.docventa.show()
         
     def InsertEnTabla(self):
-        
         #Obtener ID de Venta y Productos Vendidos
-        self.idVenta = self.VentaDao.ObtenerUltimaVentaID()
-        LstProdVendidos = self.DetalleVentaDao.ObtenerProdVendidos(self.idVenta)
+        if self.idVentaINIT == "":
+            self.idVenta = self.VentaDao.ObtenerUltimaVentaID()
+            LstProdVendidos = self.DetalleVentaDao.ObtenerProdVendidos(self.idVenta)
+        else:
+            self.idVenta = self.idVentaINIT
+            LstProdVendidos = self.DetalleVentaDao.ObtenerProdVendidos(self.idVenta)
+        
         Cantidad = len(LstProdVendidos)
         self.docventa.tw_venta.setRowCount(Cantidad)
         Fila = 0
