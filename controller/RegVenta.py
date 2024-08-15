@@ -61,6 +61,10 @@ class RegVentaFRM:
                     self.ListarActivacion()
                     
     def RegistroActivacion(self):
+        self.newVenta.cb_tipoDNI_vent.clear()
+        self.newVenta.cb_medioP_vent.clear()
+        self.newVenta.cb_product_vent.clear()
+        self.newVenta.cb_tipodoc_vent.clear()
         self.ListaProductosAdquiridos = []
         self.ObjProductoID = []
         self.ObjCantidadProd = []

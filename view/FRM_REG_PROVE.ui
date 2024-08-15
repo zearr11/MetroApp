@@ -83,7 +83,7 @@ border-radius:13px</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_listar_prov">
+   <widget class="QPushButton" name="bt_mod_prov">
     <property name="geometry">
      <rect>
       <x>219</x>
@@ -120,7 +120,7 @@ QPushButton:pressed {
 </string>
     </property>
     <property name="text">
-     <string>Listar</string>
+     <string>Modificar</string>
     </property>
    </widget>
    <widget class="QPushButton" name="bt_cancelar_prov">
@@ -659,13 +659,596 @@ QComboBox::hover{
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="window_2_mod" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>97</y>
+      <width>811</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>2</y>
+       <width>751</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>40</y>
+       <width>651</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Informacion</string>
+     </property>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>65</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>Razon Social:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_razon_social_mod">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>65</x>
+        <y>90</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>RUC:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_ruc_mod">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>90</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>64</x>
+        <y>143</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>Rubro:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_emailMod">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>90</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>335</x>
+        <y>40</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>Dirección:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_direccMod">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>335</x>
+        <y>90</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>Email:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="qc_rubroMod">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>143</y>
+        <width>291</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;    
+}
+QComboBox::down-arrow {
+	border-image: url(:/Imagenes/203484.png);
+}
+
+QComboBox::hover{
+	background-color: rgb(241, 241, 241);
+}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_actualizar">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>201</y>
+        <width>241</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+	border: 2px solid #444444;
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 255, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(0, 217, 0);
+}</string>
+      </property>
+      <property name="text">
+       <string>Actualizar Proveedor</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>64</x>
+        <y>200</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white</string>
+      </property>
+      <property name="text">
+       <string>Teléfono Fijo:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_telfMOD">
+      <property name="geometry">
+       <rect>
+        <x>199</x>
+        <y>200</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>330</y>
+       <width>651</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Selecciona un Proveedor</string>
+     </property>
+     <widget class="QTableWidget" name="tw_showProv">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>40</y>
+        <width>601</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI,Arial,sans-serif</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget, QTableView {
+            background-color: #f9f9f9;        /* Color de fondo de la tabla */
+            border: 1px solid #d3d3d3;        /* Borde de la tabla */
+            gridline-color: #e1e1e1;          /* Color de las líneas de la cuadrícula */
+            font-family: &quot;Segoe UI&quot;, Arial, sans-serif;  /* Fuente de la tabla */
+        }
+QHeaderView::section {
+            background-color: #A67C00;        /* Color de fondo de los encabezados (marrón oscuro) */
+            color: white;                     /* Color del texto de los encabezados */
+            padding: 4px;                     /* Espaciado dentro de los encabezados */
+            border: 1px solid #dddddd;        /* Borde de los encabezados */
+        }
+
+
+
+        QTableWidget::item, QTableView::item {
+            padding: 8px;                     /* Espaciado dentro de las celdas */
+            border: none;                     /* Sin bordes individuales en las celdas */
+        }
+
+        QTableWidget::item:selected, QTableView::item:selected {
+            background-color: #FFD700;        /* Color de fondo para las celdas seleccionadas (amarillo dorado) */
+            color: black;                     /* Color del texto para las celdas seleccionadas */
+        }
+
+        QTableWidget::item:hover, QTableView::item:hover {
+            background-color: #FFFACD;        /* Color de fondo para las celdas al pasar el cursor (amarillo claro) */
+            color: black;                     /* Color del texto para las celdas al pasar el cursor */
+        }
+
+        QScrollBar:vertical {
+            background-color: #f5f5f5;        /* Color de fondo del scrollbar vertical */
+            width: 12px;                      /* Ancho del scrollbar */
+            margin: 0px 0px 0px 0px;
+        }
+
+        QScrollBar::handle:vertical {
+            background-color: #c0c0c0;        /* Color del 'handle' del scrollbar */
+            min-height: 20px;
+            border-radius: 5px;               /* Bordes redondeados */
+        }
+
+        QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+            background-color: #d3d3d3;
+            height: 0px;                      /* Oculta las líneas de los extremos */
+        }
+
+        QScrollBar:horizontal {
+            background-color: #f5f5f5;        /* Color de fondo del scrollbar horizontal */
+            height: 12px;                     /* Altura del scrollbar */
+            margin: 0px 0px 0px 0px;
+        }
+
+        QScrollBar::handle:horizontal {
+            background-color: #c0c0c0;        /* Color del 'handle' del scrollbar */
+            min-width: 20px;
+            border-radius: 5px;               /* Bordes redondeados */
+        }
+
+        QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+            background-color: #d3d3d3;
+            width: 0px;                       /* Oculta las líneas de los extremos */
+        }
+
+</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>idProveedor</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Razon Social</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>RUC</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Direccion</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Email</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Teléfono</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Rubro</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="warning_mod">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>6</y>
+       <width>631</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>label_11</zorder>
+    <zorder>groupBox_6</zorder>
+    <zorder>groupBox_7</zorder>
+    <zorder>warning_mod</zorder>
+   </widget>
    <zorder>label</zorder>
    <zorder>label_3</zorder>
    <zorder>label_9</zorder>
-   <zorder>window_1_pv</zorder>
    <zorder>bt_cancelar_prov</zorder>
    <zorder>bt_nuevo_prov</zorder>
-   <zorder>bt_listar_prov</zorder>
+   <zorder>bt_mod_prov</zorder>
+   <zorder>window_1_pv</zorder>
+   <zorder>window_2_mod</zorder>
   </widget>
  </widget>
  <resources>

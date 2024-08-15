@@ -53,3 +53,23 @@ class ProveedorCLASS(ContactoCLASS, CategoriaCLASS):
         #Insert en Tabla Proveedor y Finalizacion del Registro
         DaoProveedor.InsertTablaProveedor(RazonSocial, NumeroRUC, Direccion, idContacto, idCategoria)
         
+        
+    def Actualizar_Proveedor(self, NewRazon, NewRUC, NewDireccion, NewTelef, NewEmail, NewTipoCategoria, idProveedor):
+        
+        TelfA = self.get_Telefono()
+        EmailA = self.get_Email()
+        
+        DaoContacto = ContactoDao.ContactoBD()
+        DaoCategoria = CategoriaDao.CategoriaBD()
+        DaoProveedor = ProveedorDao.ProveedorBD()
+        
+        #Obtener ID CategoriaNeW
+        idCategoriaN = DaoCategoria.ObtenerCategoriaID(NewTipoCategoria)
+        
+        #Obtener ID Contacto y Actualizar Datos
+        idContactoAN = DaoContacto.ObtenerContactoID(TelfA, EmailA)
+        DaoContacto.UpdateContacto(NewTelef, NewEmail, idContactoAN)
+        
+        #Actualizar Tabla Proveedor
+        DaoProveedor.UpdateProveedor(NewRazon, NewRUC, NewDireccion, idCategoriaN, idProveedor)
+        

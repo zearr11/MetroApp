@@ -11,7 +11,6 @@ class ProveedorBD:
         objProveedorID = cursor.fetchone()
         objProveedor = objProveedorID[0]
         return objProveedor
-    
         
     def InsertTablaProveedor(self, RazonSocial, Numero_RUC, Direccion, idContacto, idCategoria):
         nbd = ConexionBD.ConectBaseData()
@@ -21,4 +20,24 @@ class ProveedorBD:
         nbd.conexionBD.commit()
         cursor.close()
         
+    def ConsultaTablaProveedor(self):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaTablaProveedor = "SELECT p.idProveedor, p.RazonSocial, p.RUC, p.Direccion, c.Email, c.Telefono, a.TipoCategoria from proveedor p inner join contacto c on p.Contacto_idContacto = c.idContacto inner join categoria a on p.Categoria_idCategoria = a.idCategoria"
+        cursor.execute(ConsultaTablaProveedor)
+        return cursor.fetchall()
+    
+    def ObtenerProveedor(self, idProve):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerProveedor = "SELECT p.idProveedor, p.RazonSocial, p.RUC, p.Direccion, c.Email, c.Telefono, a.TipoCategoria from proveedor p inner join contacto c on p.Contacto_idContacto = c.idContacto inner join categoria a on p.Categoria_idCategoria = a.idCategoria where p.idProveedor = '{}'".format(idProve)
+        cursor.execute(ObtenerProveedor)
+        return cursor.fetchone()
         
+    def UpdateProveedor(self, RazonSocial, nRUC, Direccion, idCategoria, idProveedor):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        query = "UPDATE proveedor SET RazonSocial = '{}', RUC ='{}', Direccion = '{}', Categoria_idCategoria = '{}' WHERE idProveedor = '{}'".format(RazonSocial, nRUC, Direccion, idCategoria, idProveedor)
+        cursor.execute(query)
+        nbd.conexionBD.commit()
+        cursor.close()
