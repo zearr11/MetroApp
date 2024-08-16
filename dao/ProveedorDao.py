@@ -11,6 +11,15 @@ class ProveedorBD:
         objProveedorID = cursor.fetchone()
         objProveedor = objProveedorID[0]
         return objProveedor
+    
+    def ObtenerProveedorID2(self, RazonSocial):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaProveedor2 = "SELECT idProveedor FROM proveedor WHERE RazonSocial = '{}'".format(RazonSocial)
+        cursor.execute(ConsultaProveedor2)
+        objProveedorID2 = cursor.fetchone()
+        objProveedor2 = objProveedorID2[0]
+        return objProveedor2
         
     def InsertTablaProveedor(self, RazonSocial, Numero_RUC, Direccion, idContacto, idCategoria):
         nbd = ConexionBD.ConectBaseData()
@@ -41,3 +50,10 @@ class ProveedorBD:
         cursor.execute(query)
         nbd.conexionBD.commit()
         cursor.close()
+        
+    def DataAllProveedor(self):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        cursor.execute("SELECT RazonSocial FROM proveedor")
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]

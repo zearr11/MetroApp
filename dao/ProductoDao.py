@@ -46,3 +46,11 @@ class ProductoBD:
         cursor.execute("SELECT Descripcion FROM producto WHERE Estado_idEstado = 2")
         rows = cursor.fetchall()
         return [row[0] for row in rows]
+    
+    def DataAllProducto(self):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        cursor.execute("SELECT Descripcion FROM producto")
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]
+    

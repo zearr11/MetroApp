@@ -89,14 +89,14 @@ class RegVentaFRM:
         
     def btListar(self):
         self.ShowWidget(self.newVenta.window_2_list)
-    
-    #########################################################################################################
-    #BOTONES REG VENTA  
+        
     def CancelarProduct(self):
         self.newVenta.close()
         self.menu = MenuPrincipal.MenuFRM()
-        
-        
+    
+    #########################################################################################################
+    #REG VENTA  
+    
     def LimpiarRegistro(self):
         if len(self.ListaProductosAdquiridos) == 0:
             self.newVenta.cb_tipoDNI_vent.setCurrentText("")
