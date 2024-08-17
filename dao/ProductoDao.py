@@ -54,3 +54,20 @@ class ProductoBD:
         rows = cursor.fetchall()
         return [row[0] for row in rows]
     
+    def UpdateCantProd(self, Cantidad, idProducto):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        query = "UPDATE producto SET Cantidad = '{}' where idProducto = '{}'".format(Cantidad, idProducto)
+        cursor.execute(query)
+        nbd.conexionBD.commit()
+        cursor.close()
+    
+    def ObtenerCantidadProd(self, idProducto):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerCantidadProd = "select cantidad from producto where idProducto = '{}'".format(idProducto)
+        cursor.execute(ObtenerCantidadProd)
+        ObtenerCantidadProdS = cursor.fetchone()
+        ObtenerCantidadProdOne = ObtenerCantidadProdS[0]
+        return ObtenerCantidadProdOne
+    

@@ -969,6 +969,83 @@ QTableWidget::item:selected {
        </font>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Estado</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+     </column>
+    </widget>
+    <widget class="QLabel" name="fondo3">
+     <property name="geometry">
+      <rect>
+       <x>831</x>
+       <y>30</y>
+       <width>71</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../view_img/METROSPLASH.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>251</x>
+       <y>30</y>
+       <width>551</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgba(0,0,0,35);
+border-radius:13px</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bol_fact">
+     <property name="geometry">
+      <rect>
+       <x>101</x>
+       <y>40</y>
+       <width>851</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>19</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white</string>
+     </property>
+     <property name="text">
+      <string>Pedidos de Compra Registrados</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </widget>
    <zorder>label</zorder>
@@ -977,8 +1054,8 @@ QTableWidget::item:selected {
    <zorder>bt_cancelar_pedcompr</zorder>
    <zorder>bt_nuevo_vent</zorder>
    <zorder>bt_listar_vent</zorder>
-   <zorder>window_1_compr</zorder>
    <zorder>window_2_lst</zorder>
+   <zorder>window_1_compr</zorder>
   </widget>
  </widget>
  <resources>

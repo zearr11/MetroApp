@@ -48,3 +48,10 @@ class ClienteBD:
         cursor.execute(query)
         nbd.conexionBD.commit()
         cursor.close()
+        
+    def ObtenerClienteXdni(self, NumeroDocumento):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerClienteXdni = "select c.Direccion, d.Telefono, p.Nombres  from cliente c inner join persona p on c.Persona_idPersona = p.idPersona inner join contacto d on c.Persona_Contacto_idContacto = d.idContacto inner join numerodocumento f on c.Persona_NumeroDocumento_idNumeroDocumento = f.idNumeroDocumento where f.NumeroDoc = '{}'".format(NumeroDocumento)
+        cursor.execute(ObtenerClienteXdni)
+        return cursor.fetchone()

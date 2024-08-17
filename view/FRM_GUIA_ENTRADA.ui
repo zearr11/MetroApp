@@ -66,11 +66,11 @@ border: 3px solid white; </string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="window_1_venta" native="true">
+   <widget class="QWidget" name="ventana2" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>4</y>
+      <y>10</y>
       <width>841</width>
       <height>601</height>
      </rect>
@@ -100,8 +100,8 @@ border-radius:13px</string>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>30</y>
+       <x>108</x>
+       <y>28</y>
        <width>261</width>
        <height>271</height>
       </rect>
@@ -117,8 +117,8 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>40</y>
+       <x>268</x>
+       <y>38</y>
        <width>91</width>
        <height>91</height>
       </rect>
@@ -136,8 +136,8 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>213</y>
+       <x>73</x>
+       <y>211</y>
        <width>331</width>
        <height>81</height>
       </rect>
@@ -162,9 +162,9 @@ border-radius: 20px;</string>
     <widget class="QGroupBox" name="GB_2_CLIENT">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>30</y>
-       <width>341</width>
+       <x>79</x>
+       <y>320</y>
+       <width>321</width>
        <height>101</height>
       </rect>
      </property>
@@ -191,12 +191,12 @@ color: white
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="cod_guia">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>20</x>
         <y>40</y>
-        <width>341</width>
+        <width>281</width>
         <height>31</height>
        </rect>
       </property>
@@ -216,11 +216,11 @@ color: white
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="bt_guardar_vent">
+    <widget class="QPushButton" name="siguiente_bt">
      <property name="geometry">
       <rect>
        <x>650</x>
-       <y>480</y>
+       <y>460</y>
        <width>111</width>
        <height>91</height>
       </rect>
@@ -257,11 +257,11 @@ QPushButton:pressed {
 Producto</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_clear_reg_vent">
+    <widget class="QPushButton" name="bt_finish">
      <property name="geometry">
       <rect>
-       <x>419</x>
-       <y>495</y>
+       <x>325</x>
+       <y>488</y>
        <width>191</width>
        <height>61</height>
       </rect>
@@ -296,13 +296,13 @@ QPushButton:pressed {
       <string>Finalizar Registro</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_cancelar_vent">
+    <widget class="QPushButton" name="bt_cancelar2">
      <property name="geometry">
       <rect>
-       <x>229</x>
-       <y>495</y>
-       <width>181</width>
-       <height>61</height>
+       <x>80</x>
+       <y>460</y>
+       <width>111</width>
+       <height>91</height>
       </rect>
      </property>
      <property name="font">
@@ -339,8 +339,8 @@ QPushButton:pressed {
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>164</x>
-       <y>60</y>
+       <x>162</x>
+       <y>58</y>
        <width>151</width>
        <height>151</height>
       </rect>
@@ -358,8 +358,8 @@ QPushButton:pressed {
     <widget class="QGroupBox" name="GB_2_CLIENT_2">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>140</y>
+       <x>439</x>
+       <y>80</y>
        <width>341</width>
        <height>201</height>
       </rect>
@@ -429,12 +429,12 @@ color: white
        <string>Cantidad:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_16">
+     <widget class="QLabel" name="prod_m">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>60</y>
-        <width>91</width>
+        <x>11</x>
+        <y>62</y>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
@@ -449,13 +449,16 @@ color: white
       <property name="text">
        <string>P1</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-     <widget class="QLabel" name="label_17">
+     <widget class="QLabel" name="cant_m">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>140</y>
-        <width>91</width>
+        <x>11</x>
+        <y>138</y>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
@@ -470,13 +473,16 @@ color: white
       <property name="text">
        <string>C1</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </widget>
     <widget class="QGroupBox" name="GB_2_CLIENT_4">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>360</y>
+       <x>439</x>
+       <y>310</y>
        <width>341</width>
        <height>111</height>
       </rect>
@@ -504,7 +510,7 @@ color: white
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <widget class="QRadioButton" name="radioButton_2">
+     <widget class="QRadioButton" name="rb_no">
       <property name="geometry">
        <rect>
         <x>178</x>
@@ -525,7 +531,7 @@ color: white
        <string>No</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="radioButton">
+     <widget class="QRadioButton" name="rb_si">
       <property name="geometry">
        <rect>
         <x>118</x>
@@ -564,130 +570,53 @@ color: white
        <string notr="true">color: white;</string>
       </property>
       <property name="text">
-       <string>¿Se recibio correctamente?</string>
+       <string>¿Se recibio el producto?</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="GB_2_CLIENT_5">
+    <widget class="QLabel" name="warning_GUIA">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>320</y>
-       <width>321</width>
-       <height>151</height>
+       <x>210</x>
+       <y>440</y>
+       <width>421</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QComboBox {
-    color: black;
-}
-
-QGroupBox{
-color: white
-}
-</string>
+      <string notr="true">color: red</string>
      </property>
-     <property name="title">
+     <property name="text">
       <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <widget class="QLabel" name="label_19">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>20</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: white;</string>
-      </property>
-      <property name="text">
-       <string>Ingresar observacion:</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>60</y>
-        <width>241</width>
-        <height>71</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="bt_guardar_vent_2">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>480</y>
-       <width>111</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>13</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
-}
-
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Anterior
-Producto</string>
-     </property>
     </widget>
     <zorder>label_10</zorder>
     <zorder>GB_2_CLIENT</zorder>
-    <zorder>bt_guardar_vent</zorder>
-    <zorder>bt_clear_reg_vent</zorder>
+    <zorder>siguiente_bt</zorder>
+    <zorder>bt_finish</zorder>
     <zorder>label_7</zorder>
     <zorder>label_6</zorder>
-    <zorder>bt_cancelar_vent</zorder>
+    <zorder>bt_cancelar2</zorder>
     <zorder>label_2</zorder>
     <zorder>label_4</zorder>
     <zorder>GB_2_CLIENT_2</zorder>
     <zorder>GB_2_CLIENT_4</zorder>
-    <zorder>GB_2_CLIENT_5</zorder>
-    <zorder>bt_guardar_vent_2</zorder>
+    <zorder>warning_GUIA</zorder>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="ventana1" native="true">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -803,7 +732,7 @@ border-radius: 20px;</string>
      <property name="geometry">
       <rect>
        <x>115</x>
-       <y>340</y>
+       <y>338</y>
        <width>391</width>
        <height>101</height>
       </rect>
@@ -831,7 +760,7 @@ color: white
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <widget class="QComboBox" name="cb_product_vent_2">
+     <widget class="QComboBox" name="cb_cod_guias">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -872,11 +801,11 @@ QComboBox::down-arrow {
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="bt_clear_reg_vent_2">
+    <widget class="QPushButton" name="bt_reg_ingreso">
      <property name="geometry">
       <rect>
        <x>314</x>
-       <y>480</y>
+       <y>490</y>
        <width>191</width>
        <height>61</height>
       </rect>
@@ -911,11 +840,11 @@ QPushButton:pressed {
       <string>Registrar Ingreso</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_cancelar_vent_2">
+    <widget class="QPushButton" name="btCancelar1">
      <property name="geometry">
       <rect>
        <x>124</x>
-       <y>480</y>
+       <y>490</y>
        <width>181</width>
        <height>61</height>
       </rect>
@@ -951,11 +880,37 @@ QPushButton:pressed {
       <string>Cancelar</string>
      </property>
     </widget>
+    <widget class="QLabel" name="warningFRM1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>440</y>
+       <width>601</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: red</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
    <zorder>label</zorder>
    <zorder>label_3</zorder>
-   <zorder>widget</zorder>
-   <zorder>window_1_venta</zorder>
+   <zorder>ventana1</zorder>
+   <zorder>ventana2</zorder>
   </widget>
  </widget>
  <resources>

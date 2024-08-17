@@ -123,7 +123,14 @@ class RegVentaFRM:
             self.newVenta.warning_regvent.setText("¡Para registrar la venta debes agregar productos!")
         else:
             self.AsignacionValoresAListaProductos()
-        
+    
+    def ComprobadorCantidad(self):
+        CxP = self.ConnectProducto.ObtenerCantidadProd(self.IDprodTemp)
+        if int(self.CantidadProduct) > int(CxP):
+            return False
+        else:
+            return True
+    
     def AgregarProducto(self):
         self.SeleccionadorDNI = self.newVenta.cb_tipoDNI_vent.currentText()
         self.MedPago = self.newVenta.cb_medioP_vent.currentText()
@@ -148,39 +155,50 @@ class RegVentaFRM:
                         except:
                             self.newVenta.warning_regvent.setText("¡Ingrese un valor numérico en el campo 'Cantidad'!")
                         else:
-                            self.AgregadoAdicional()
                             Lst1 = self.ConnectProducto.ObtenerProducto2(self.ProductSelect)
-                            self.TotalxProduct = round((float(float(Lst1[4]) * float(self.CantidadProduct))),2)
-                            #
-                            Fila = self.newVenta.tw_venta.rowCount()
-                            self.newVenta.tw_venta.insertRow(Fila) 
-                            #
-                            self.newVenta.tw_venta.setItem(Fila, 0, QTableWidgetItem(str(Lst1[0])))
-                            self.newVenta.tw_venta.setItem(Fila, 1, QTableWidgetItem(Lst1[1]))
-                            self.newVenta.tw_venta.setItem(Fila, 2, QTableWidgetItem(Lst1[2]))
-                            self.newVenta.tw_venta.setItem(Fila, 3, QTableWidgetItem(Lst1[3]))
-                            self.newVenta.tw_venta.setItem(Fila, 4, QTableWidgetItem(("S/ ")+str(Lst1[4])))
-                            self.newVenta.tw_venta.setItem(Fila, 5, QTableWidgetItem(self.CantidadProduct))
-                            self.newVenta.tw_venta.setItem(Fila, 6, QTableWidgetItem(("S/ ")+str(self.TotalxProduct)))
+                            self.IDprodTemp = Lst1[0]
+                            if self.ComprobadorCantidad() is True:
+                                self.AgregadoAdicional()
+                                Lst1 = self.ConnectProducto.ObtenerProducto2(self.ProductSelect)
+                                self.TotalxProduct = round((float(float(Lst1[4]) * float(self.CantidadProduct))),2)
+                                #
+                                Fila = self.newVenta.tw_venta.rowCount()
+                                self.newVenta.tw_venta.insertRow(Fila) 
+                                #
+                                self.newVenta.tw_venta.setItem(Fila, 0, QTableWidgetItem(str(Lst1[0])))
+                                self.newVenta.tw_venta.setItem(Fila, 1, QTableWidgetItem(Lst1[1]))
+                                self.newVenta.tw_venta.setItem(Fila, 2, QTableWidgetItem(Lst1[2]))
+                                self.newVenta.tw_venta.setItem(Fila, 3, QTableWidgetItem(Lst1[3]))
+                                self.newVenta.tw_venta.setItem(Fila, 4, QTableWidgetItem(("S/ ")+str(Lst1[4])))
+                                self.newVenta.tw_venta.setItem(Fila, 5, QTableWidgetItem(self.CantidadProduct))
+                                self.newVenta.tw_venta.setItem(Fila, 6, QTableWidgetItem(("S/ ")+str(self.TotalxProduct)))
+                
+                                for row in range(self.newVenta.tw_venta.rowCount()):
+                                    for column in range(self.newVenta.tw_venta.columnCount()):
+                                        item = self.newVenta.tw_venta.item(row, column)
+                                        if item:
+                                            item.setTextAlignment(Qt.AlignCenter)
             
-                            for row in range(self.newVenta.tw_venta.rowCount()):
-                                for column in range(self.newVenta.tw_venta.columnCount()):
-                                    item = self.newVenta.tw_venta.item(row, column)
-                                    if item:
-                                        item.setTextAlignment(Qt.AlignCenter)
-        
-                            self.newVenta.tw_venta.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-                            self.newVenta.tw_venta.setEditTriggers(QTableWidget.NoEditTriggers)
-                            self.newVenta.warning_regvent.setText("")
-                        
-                            Almacenador = []
-                            Almacenador.append(Lst1[0])#ID PRODUCTO
-                            Almacenador.append(int(self.CantidadProduct))#CANTIDAD DE PRODUCTOS ADQUIRIDOS
-                            Almacenador.append(self.TotalxProduct)#TOTAL UNITARIO = PRECIO PRODUCTO * CANTIDAD
-                            self.ListaProductosAdquiridos.append(Almacenador)
-                            self.ClearAndBloquing()
-                            #print(self.ListaProductosAdquiridos)
-                            #print(self.DatosVenta)
+                                self.newVenta.tw_venta.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+                                self.newVenta.tw_venta.setEditTriggers(QTableWidget.NoEditTriggers)
+                                self.newVenta.warning_regvent.setText("")
+                            
+                                Almacenador = []
+                                Almacenador.append(Lst1[0])#ID PRODUCTO
+                                Almacenador.append(int(self.CantidadProduct))#CANTIDAD DE PRODUCTOS ADQUIRIDOS
+                                Almacenador.append(self.TotalxProduct)#TOTAL UNITARIO = PRECIO PRODUCTO * CANTIDAD
+                                self.ListaProductosAdquiridos.append(Almacenador)
+                                
+                                #Nueva Propiedad
+                                index = self.newVenta.cb_product_vent.findText(self.ProductSelect)
+                                if index != -1:
+                                    self.newVenta.cb_product_vent.removeItem(index)
+                                
+                                self.ClearAndBloquing()
+                            else:
+                                if self.ComprobadorCantidad() is False:
+                                    self.newVenta.warning_regvent.setText("Sin existencias suficientes, cambie cantidad")
+
     #########################################################################################################
     
     #########################################################################################################
@@ -261,8 +279,16 @@ class RegVentaFRM:
         #Insert en Tabla DetalleVenta
         for insertar in range(len(self.ListaProductosAdquiridos)):
             ConnectDaoDetalleVenta.InsertTablaDetalleVenta(self.ObjCantidadProd[insertar], self.ObjPrecioTxProd[insertar], self.ObjProductoID[insertar], idVenta)
-    
+
+        self.Descontador()
         self.MostradoDocumento()
+        
+    def Descontador(self):
+        for h in range(len(self.ListaProductosAdquiridos)):
+            CantProd = self.ConnectProducto.ObtenerCantidadProd(self.ObjProductoID[h])
+            CantReduce = self.ObjCantidadProd[h]
+            NewCant = int(CantProd) - int(CantReduce)
+            self.ConnectProducto.UpdateCantProd(NewCant, self.ObjProductoID[h])
         
     def MostradoDocumento(self):
         self.newVenta.close()

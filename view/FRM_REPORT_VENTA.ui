@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>452</width>
-    <height>611</height>
+    <height>671</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>452</width>
-    <height>611</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
       <x>0</x>
       <y>0</y>
       <width>451</width>
-      <height>611</height>
+      <height>671</height>
      </rect>
     </property>
     <property name="text">
@@ -54,7 +54,7 @@
       <x>0</x>
       <y>0</y>
       <width>451</width>
-      <height>611</height>
+      <height>671</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -66,13 +66,13 @@ border: 3px solid white; </string>
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="wd_regUser" native="true">
+   <widget class="QWidget" name="widget_1" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>-1</y>
       <width>451</width>
-      <height>611</height>
+      <height>671</height>
      </rect>
     </property>
     <widget class="QLabel" name="label_4">
@@ -81,7 +81,7 @@ border: 3px solid white; </string>
        <x>20</x>
        <y>21</y>
        <width>411</width>
-       <height>571</height>
+       <height>631</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -192,7 +192,7 @@ border-radius: 20px;</string>
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>334</y>
+       <y>372</y>
        <width>271</width>
        <height>61</height>
       </rect>
@@ -205,11 +205,11 @@ border-radius:13px</string>
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_nuevo_regUser">
+    <widget class="QPushButton" name="btGenerar">
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>488</y>
+       <y>544</y>
        <width>121</width>
        <height>71</height>
       </rect>
@@ -251,11 +251,11 @@ QPushButton:pressed {
       <string>Generar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_cancelar_regUser">
+    <widget class="QPushButton" name="btCancelar">
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>488</y>
+       <y>544</y>
        <width>121</width>
        <height>71</height>
       </rect>
@@ -294,7 +294,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>338</y>
+       <y>376</y>
        <width>81</width>
        <height>51</height>
       </rect>
@@ -319,11 +319,11 @@ QPushButton:pressed {
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QDateEdit" name="dateEdit">
+    <widget class="QDateEdit" name="desde_de">
      <property name="geometry">
       <rect>
        <x>195</x>
-       <y>344</y>
+       <y>382</y>
        <width>141</width>
        <height>41</height>
       </rect>
@@ -338,7 +338,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>404</y>
+       <y>440</y>
        <width>271</width>
        <height>61</height>
       </rect>
@@ -351,11 +351,11 @@ border-radius:13px</string>
       <string/>
      </property>
     </widget>
-    <widget class="QDateEdit" name="dateEdit_2">
+    <widget class="QDateEdit" name="hasta_de">
      <property name="geometry">
       <rect>
        <x>195</x>
-       <y>414</y>
+       <y>450</y>
        <width>141</width>
        <height>41</height>
       </rect>
@@ -370,7 +370,7 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>105</x>
-       <y>408</y>
+       <y>444</y>
        <width>81</width>
        <height>51</height>
       </rect>
@@ -395,30 +395,100 @@ border-radius:13px</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_11">
+    <widget class="QGroupBox" name="GB_2_CLIENT">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>90</x>
        <y>283</y>
-       <width>261</width>
+       <width>271</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Filtro</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QComboBox" name="cb_filtro">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>33</y>
+        <width>251</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+    padding: 1px 18px 1px 3px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;    
+}
+QComboBox::down-arrow {
+	border-image: url(:/Imagenes/203484.png);
+}
+
+</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="warning_ped">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>500</y>
+       <width>391</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>15</pointsize>
+       <pointsize>11</pointsize>
        <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white</string>
+      <string notr="true">color: red</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Generar el Reporte........&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="scaledContents">
-      <bool>false</bool>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -429,32 +499,33 @@ border-radius:13px</string>
     <zorder>label_3</zorder>
     <zorder>label_2</zorder>
     <zorder>label_7</zorder>
-    <zorder>bt_nuevo_regUser</zorder>
-    <zorder>bt_cancelar_regUser</zorder>
+    <zorder>btGenerar</zorder>
+    <zorder>btCancelar</zorder>
     <zorder>label_5</zorder>
     <zorder>label_8</zorder>
-    <zorder>dateEdit</zorder>
+    <zorder>desde_de</zorder>
     <zorder>label_9</zorder>
-    <zorder>dateEdit_2</zorder>
+    <zorder>hasta_de</zorder>
     <zorder>label_10</zorder>
-    <zorder>label_11</zorder>
+    <zorder>GB_2_CLIENT</zorder>
+    <zorder>warning_ped</zorder>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
       <width>451</width>
-      <height>611</height>
+      <height>671</height>
      </rect>
     </property>
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>20</y>
+       <y>21</y>
        <width>411</width>
-       <height>571</height>
+       <height>631</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -561,221 +632,13 @@ border-radius: 20px;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QGroupBox" name="GB_2_CLIENT">
+    <widget class="QPushButton" name="bTretorno">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>276</y>
-       <width>271</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QComboBox {
-    color: black;
-}
-
-QGroupBox{
-color: white
-}
-</string>
-     </property>
-     <property name="title">
-      <string>Filtro</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <widget class="QComboBox" name="cb_product_vent_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>33</y>
-        <width>251</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QComboBox {
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-    border: 1px solid #6c6c6c;
-    border-radius: 5px;
-    padding: 1px 18px 1px 3px;
-    min-width: 6em;
-}
-
-QComboBox::drop-down {
-    border-left-width: 1px;
-    border-left-color: darkgray;
-    border-left-style: solid;    
-}
-QComboBox::down-arrow {
-	border-image: url(:/Imagenes/203484.png);
-}
-
-</string>
-      </property>
-      <property name="editable">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QLabel" name="label_18">
-     <property name="geometry">
-      <rect>
-       <x>79</x>
-       <y>370</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>Numero de Ventas:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_19">
-     <property name="geometry">
-      <rect>
-       <x>79</x>
-       <y>400</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>Productos Vendidos:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_20">
-     <property name="geometry">
-      <rect>
-       <x>79</x>
-       <y>431</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>Dinero Recaudado:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_21">
-     <property name="geometry">
-      <rect>
-       <x>283</x>
-       <y>370</y>
-       <width>91</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>200</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_22">
-     <property name="geometry">
-      <rect>
-       <x>283</x>
-       <y>400</y>
-       <width>91</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>200</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_23">
-     <property name="geometry">
-      <rect>
-       <x>283</x>
-       <y>430</y>
-       <width>91</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;</string>
-     </property>
-     <property name="text">
-      <string>200</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bt_cancelar_vent">
-     <property name="geometry">
-      <rect>
-       <x>237</x>
-       <y>481</y>
-       <width>111</width>
-       <height>81</height>
+       <x>95</x>
+       <y>562</y>
+       <width>261</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -806,68 +669,194 @@ QPushButton:pressed {
 }</string>
      </property>
      <property name="text">
-      <string>Retornar
-al Menu
-Principal</string>
+      <string>Retornar al Menu Principal</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_nuevo_vent">
+    <widget class="QGroupBox" name="GB_2_CLIENT_2">
      <property name="geometry">
       <rect>
-       <x>107</x>
-       <y>481</y>
-       <width>111</width>
+       <x>70</x>
+       <y>284</y>
+       <width>311</width>
        <height>81</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
-       <underline>false</underline>
-       <strikeout>false</strikeout>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton {
-	 background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f6f7fa, stop:1 #dadbde);
-	border: 2px solid #444444;
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 12px;
+      <string notr="true">QComboBox {
+    color: black;
 }
 
-QPushButton:hover {
-	background-color: rgb(241, 241, 241);
-}
-
-QPushButton:pressed {
-	background-color: rgb(223, 223, 223);
+QGroupBox{
+color: white
 }
 </string>
      </property>
-     <property name="text">
-      <string>Generar
-Nuevo
-Reporte</string>
+     <property name="title">
+      <string>Numero de Ventas Totales</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QLabel" name="ventasT_le">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>35</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;</string>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="GB_2_CLIENT_3">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>374</y>
+       <width>311</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Productos Totales Vendidos</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QLabel" name="prodT_le">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>35</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;</string>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="GB_2_CLIENT_4">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>464</y>
+       <width>311</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string>Dinero Total Recaudado</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QLabel" name="dineroT_le">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>35</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;</string>
+      </property>
+      <property name="text">
+       <string>200</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
     <zorder>label_12</zorder>
     <zorder>label_13</zorder>
     <zorder>label_16</zorder>
     <zorder>label_17</zorder>
     <zorder>label_15</zorder>
-    <zorder>GB_2_CLIENT</zorder>
-    <zorder>label_18</zorder>
-    <zorder>label_19</zorder>
-    <zorder>label_20</zorder>
-    <zorder>label_21</zorder>
-    <zorder>label_22</zorder>
-    <zorder>label_23</zorder>
-    <zorder>bt_cancelar_vent</zorder>
-    <zorder>bt_nuevo_vent</zorder>
+    <zorder>bTretorno</zorder>
+    <zorder>GB_2_CLIENT_2</zorder>
+    <zorder>GB_2_CLIENT_3</zorder>
+    <zorder>GB_2_CLIENT_4</zorder>
    </widget>
+   <zorder>label</zorder>
+   <zorder>label_14</zorder>
+   <zorder>widget_2</zorder>
+   <zorder>widget_1</zorder>
   </widget>
  </widget>
  <resources>

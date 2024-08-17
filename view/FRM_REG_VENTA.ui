@@ -1188,10 +1188,29 @@ border-radius:13px</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>Registro de Venta</string>
+      <string>Registros de Venta</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fondo3">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>20</y>
+       <width>71</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../view_img/METROSPLASH.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
    </widget>
@@ -1201,8 +1220,8 @@ border-radius:13px</string>
    <zorder>bt_cancelar_vent</zorder>
    <zorder>bt_nuevo_vent</zorder>
    <zorder>bt_listar_vent</zorder>
-   <zorder>window_1_venta</zorder>
    <zorder>window_2_list</zorder>
+   <zorder>window_1_venta</zorder>
   </widget>
  </widget>
  <resources>

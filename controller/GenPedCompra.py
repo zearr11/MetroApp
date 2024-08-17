@@ -230,14 +230,15 @@ class GenPedCompraFRM:
         
         actual = datetime.now()
         FechaCompra= actual.date()
+        Estate = "En curso"
         
         idUsuario = ConnectLoginDao.ObtenerUltimoUsuario()
         idProveedor = self.ConnectProveedorDao.ObtenerProveedorID2(self.DataCompra)
         ConnectDaoDocumentoCompra.InsertTablaDocumentodeVenta(self.SubTotal, self.IGV, self.TotalTCompra, 3)
         idDocumentoCompra = ConnectDaoDocumentoCompra.ObtenerUltimoDocumentoDeVentaID()
 
-        ConnectCompraDao.InsertTablaCompra(FechaCompra, idUsuario, idDocumentoCompra, idProveedor)
-        self.idCompra = ConnectCompraDao.ObtenerCompraID(FechaCompra, idUsuario, idDocumentoCompra, idProveedor)
+        ConnectCompraDao.InsertTablaCompra(FechaCompra, Estate, idUsuario, idDocumentoCompra, idProveedor)
+        self.idCompra = ConnectCompraDao.ObtenerCompraID(FechaCompra, idUsuario, idDocumentoCompra, idProveedor)#
 
         for ins in range(len(self.ListaProdSolicitados)):
             ConnectDetalleCompra.InsertTablaDetalleCompra(self.ObjCantidadProd[ins], self.ObjPrecioTxProd[ins], self.ObjProductoID[ins], self.idCompra)
@@ -267,6 +268,7 @@ class GenPedCompraFRM:
             self.newPedCompr.tw_PED_COMPR.setItem(Fila, 4, QTableWidgetItem(obj[5]))
             self.newPedCompr.tw_PED_COMPR.setItem(Fila, 5, QTableWidgetItem(obj[6]))
             self.newPedCompr.tw_PED_COMPR.setItem(Fila, 6, QTableWidgetItem("S/ "+str(obj[7])))
+            self.newPedCompr.tw_PED_COMPR.setItem(Fila, 7, QTableWidgetItem(obj[8]))
             Fila +=1
             
         for row in range(self.newPedCompr.tw_PED_COMPR.rowCount()):
