@@ -1,12 +1,13 @@
 from PyQt5 import uic
 from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario
-
+from dao import LoginDao
 
 class MenuFRM:
     
     def __init__(self):
         self.menu = uic.loadUi("view/FRM_MEN_PRINCIPAL.ui")
         self.menu.setWindowTitle("Menu Principal")
+        self.ConexionLogin = LoginDao.LoginBD()
         
         #Funcion de botones con derivacion a FRM
         self.menu.vent_1.clicked.connect(self.acceso_reg_clientes)
@@ -45,6 +46,7 @@ class MenuFRM:
         self.menu.accion_reportes.hide()
         self.menu.accion_seguridad.hide()
         self.menu.accion_ventas.hide()
+        self.menu.wd_no.hide()
         
     def ShowWidget(self, widget):
         self.HideWidgets()
@@ -63,8 +65,14 @@ class MenuFRM:
         self.ShowWidget(self.menu.accion_reportes)
         
     def ingreso_seguridad(self):
-        self.ShowWidget(self.menu.accion_seguridad)
-    
+        if self.menu.accion_seguridad.isVisible() or self.menu.wd_no.isVisible():
+            pass
+        else:
+            if self.ComprobadorPermisos() == 3:
+                self.ShowWidget(self.menu.accion_seguridad)
+            else:
+                if self.ComprobadorPermisos() != 3:
+                    self.ShowWidget(self.menu.wd_no)
     
     #Gestion Acceso a Otros FRM
     
@@ -111,6 +119,14 @@ class MenuFRM:
         self.menu.close()
         self.poli = PoliticasSeguridad.PoliticasSeguridadFRM()
         
+        
     def cierre_sesion(self):
         self.menu.close()
         self.log = Login.LoginFRM()
+        
+        
+    def ComprobadorPermisos(self):
+        idUser = self.ConexionLogin.ObtenerUltimoUsuario()
+        self.Permiso = self.ConexionLogin.ConsultaPermiso(idUser)
+        return self.Permiso
+    

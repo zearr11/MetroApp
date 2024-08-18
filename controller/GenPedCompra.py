@@ -1,7 +1,7 @@
 from PyQt5 import uic
 from controller import MenuPrincipal, DocVentaBolFact
 from dao import ProveedorDao, ProductoDao, LoginDao, DocumentoDeVentaDao, CompraDao, DetalleCompraDao
-from PyQt5.QtWidgets import QTableWidgetItem, QTableWidget
+from PyQt5.QtWidgets import QTableWidgetItem, QTableWidget, QHeaderView
 from PyQt5.QtCore import Qt
 from datetime import datetime
 
@@ -12,9 +12,6 @@ class GenPedCompraFRM:
         self.newPedCompr = uic.loadUi("view/FRM_GEN_PED_COMPR.ui")
         self.newPedCompr.setWindowTitle("Generar Pedido de Compra")
         self.ListaProdSolicitados = []
-        
-        #Ocultado de Widgets por defecto
-        self.HideWidgets()
         
         #Asignacion de Conexiones BD
         self.ConnectProveedorDao = ProveedorDao.ProveedorBD()
@@ -36,6 +33,7 @@ class GenPedCompraFRM:
         self.newPedCompr.tw_PED_COMPR.cellClicked.connect(self.ClickTblCompras)
         
         #Inicio de FRM
+        self.ShowWidget(self.newPedCompr.window_1_compr)
         self.newPedCompr.show()
          
     
@@ -156,7 +154,8 @@ class GenPedCompraFRM:
                     Temp.append(self.TotalXProducto)#Precio * Cantidad
                     self.ListaProdSolicitados.append(Temp)
 
-                    self.newPedCompr.tw_showPed.resizeColumnsToContents()
+                    #self.newPedCompr.tw_showPed.resizeColumnsToContents()
+                    self.newPedCompr.tw_showPed.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
                     self.newPedCompr.tw_showPed.setEditTriggers(QTableWidget.NoEditTriggers)
                     self.ClearAndBloquingAfterAdd()
                     self.newPedCompr.warning_ped.setText("")

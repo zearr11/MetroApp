@@ -71,3 +71,11 @@ class ProductoBD:
         ObtenerCantidadProdOne = ObtenerCantidadProdS[0]
         return ObtenerCantidadProdOne
     
+    def ObtenerArtXcat(self, idCategoria):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        Consulta = "SELECT concat(p.Descripcion,' ',p.Marca) as Articulo from producto p where Categoria_idCategoria = '{}'".format(idCategoria)
+        cursor.execute(Consulta)
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]
+    

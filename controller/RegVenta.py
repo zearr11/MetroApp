@@ -12,9 +12,6 @@ class RegVentaFRM:
         self.newVenta = uic.loadUi("view/FRM_REG_VENTA.ui")
         self.newVenta.setWindowTitle("Gestion de Ventas")
         
-        
-        self.HideWidgets()
-
         #
         self.ConnectNumeroDocumentoClientes = ClienteDao.ClienteBD()
         self.ConnectMedioPago = MedioPagoDao.MedioPagoBD()
@@ -35,6 +32,8 @@ class RegVentaFRM:
         self.newVenta.bt_add_prod_vent.clicked.connect(self.AgregarProducto)
         self.newVenta.bt_clear_reg_vent.clicked.connect(self.LimpiarRegistro)
         self.newVenta.bt_guardar_vent.clicked.connect(self.GuardadoVenta)
+        
+        self.ShowWidget(self.newVenta.window_1_venta)
         self.newVenta.show()
     ########################################################################################################
     #Funciones Principales del FRM

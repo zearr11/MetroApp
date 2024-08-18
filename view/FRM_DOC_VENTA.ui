@@ -164,7 +164,7 @@ border-radius:13px</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>¡Registro Guardado con Exito!</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -173,8 +173,8 @@ border-radius:13px</string>
     <widget class="QPushButton" name="bt_retornoMenu">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>550</y>
+       <x>285</x>
+       <y>533</y>
        <width>221</width>
        <height>61</height>
       </rect>

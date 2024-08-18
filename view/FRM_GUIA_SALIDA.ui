@@ -1093,142 +1093,11 @@ border-radius:13px</string>
       <string/>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tw_reg_guisal">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>124</y>
-       <width>911</width>
-       <height>481</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QTableWidget {
-    border: 1px solid #d6d9dc;
-    background-color: #f9fafb;
-    gridline-color: #e6e9ec;
-    alternate-background-color: #f1f3f4;
-}
-
-QHeaderView::section {
-    background-color: #e6e9ec;
-    padding: 4px;
-    border: 1px solid #d6d9dc;
-    font-weight: bold;
-    color: #333333;
-}
-
-QTableWidget::item {
-    border: 1px solid #d6d9dc;
-    padding: 5px;
-}
-
-QTableWidget::item:selected {
-    background-color: #d6d9dc;
-    color: #333333;
-}</string>
-     </property>
-     <column>
-      <property name="text">
-       <string>IdGuia</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Fecha</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Auxiliar a Cargo</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Cliente</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Telefono</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Destino</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Medio de Pago</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Cantidad de Productos</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Precio Total</string>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-     </column>
-    </widget>
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>30</y>
+       <y>41</y>
        <width>551</width>
        <height>71</height>
       </rect>
@@ -1249,9 +1118,9 @@ border-radius:13px</string>
     <widget class="QLabel" name="bol_fact">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>40</y>
-       <width>851</width>
+       <x>240</x>
+       <y>51</y>
+       <width>551</width>
        <height>51</height>
       </rect>
      </property>
@@ -1276,9 +1145,9 @@ border-radius:13px</string>
      <property name="geometry">
       <rect>
        <x>820</x>
-       <y>30</y>
-       <width>71</width>
-       <height>71</height>
+       <y>31</y>
+       <width>91</width>
+       <height>91</height>
       </rect>
      </property>
      <property name="text">
@@ -1291,6 +1160,170 @@ border-radius:13px</string>
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QGroupBox" name="GB_2_CLIENT_7">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>133</y>
+       <width>911</width>
+       <height>481</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    color: black;
+}
+
+QGroupBox{
+color: white
+}
+</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QTableWidget" name="tw_reg_guisal">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>871</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    border: 1px solid #d6d9dc;
+    background-color: #f9fafb;
+    gridline-color: #e6e9ec;
+    alternate-background-color: #f1f3f4;
+}
+
+QHeaderView::section {
+    background-color: #e6e9ec;
+    padding: 4px;
+    border: 1px solid #d6d9dc;
+    font-weight: bold;
+    color: #333333;
+}
+
+QTableWidget::item {
+    border: 1px solid #d6d9dc;
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #d6d9dc;
+    color: #333333;
+}</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>IdGuia</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Fecha</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Auxiliar a Cargo</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cliente</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Telefono</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Destino</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Medio de Pago</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cantidad de Productos</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Precio Total</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>15</pointsize>
+        </font>
+       </property>
+      </column>
+     </widget>
+    </widget>
    </widget>
    <zorder>label</zorder>
    <zorder>label_3</zorder>
@@ -1298,8 +1331,8 @@ border-radius:13px</string>
    <zorder>bt_cancelar</zorder>
    <zorder>bt_nuevo</zorder>
    <zorder>bt_listar</zorder>
-   <zorder>window_1</zorder>
    <zorder>window_2</zorder>
+   <zorder>window_1</zorder>
   </widget>
  </widget>
  <resources>

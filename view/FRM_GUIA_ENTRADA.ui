@@ -783,6 +783,7 @@ color: white
     border-radius: 5px;
     padding: 1px 18px 1px 3px;
     min-width: 6em;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
 }
 
 QComboBox::drop-down {
@@ -907,10 +908,6 @@ QPushButton:pressed {
      </property>
     </widget>
    </widget>
-   <zorder>label</zorder>
-   <zorder>label_3</zorder>
-   <zorder>ventana1</zorder>
-   <zorder>ventana2</zorder>
   </widget>
  </widget>
  <resources>

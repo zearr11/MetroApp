@@ -340,7 +340,7 @@ color: white
      <widget class="QLineEdit" name="le_numeroDNI_personal">
       <property name="geometry">
        <rect>
-        <x>162</x>
+        <x>168</x>
         <y>39</y>
         <width>141</width>
         <height>51</height>
@@ -373,16 +373,30 @@ padding-bottom:7px;</string>
      <widget class="QComboBox" name="cb_tipoDNI_personal">
       <property name="geometry">
        <rect>
-        <x>40</x>
+        <x>30</x>
         <y>44</y>
-        <width>101</width>
+        <width>111</width>
         <height>41</height>
        </rect>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>111</width>
+        <height>41</height>
+       </size>
+      </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>11</pointsize>
         <weight>50</weight>
+        <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
@@ -393,6 +407,7 @@ padding-bottom:7px;</string>
     border-radius: 5px;
     padding: 1px 18px 1px 3px;
     min-width: 6em;
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
 }
 
 QComboBox::drop-down {
@@ -634,8 +649,10 @@ color: white
       </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
+        <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
@@ -646,6 +663,7 @@ color: white
     border-radius: 5px;
     padding: 1px 18px 1px 3px;
     min-width: 6em;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
 }
 
 QComboBox::drop-down {
@@ -743,8 +761,10 @@ color: white
       </property>
       <property name="font">
        <font>
-        <pointsize>8</pointsize>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>12</pointsize>
         <weight>50</weight>
+        <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
@@ -755,6 +775,7 @@ color: white
     border-radius: 5px;
     padding: 1px 18px 1px 3px;
     min-width: 6em;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
 }
 
 QComboBox::drop-down {

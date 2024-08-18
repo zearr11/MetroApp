@@ -11,7 +11,6 @@ class GuiaSalidaFRM:
         self.guiasal = uic.loadUi("view/FRM_GUIA_SALIDA.ui")
         self.guiasal.setWindowTitle("Guia de Salida")
         
-        self.HideWidgets()
         self.ConnectNumeroDocumentoClientes = ClienteDao.ClienteBD()
         self.ConnectMedioPago = MedioPagoDao.MedioPagoBD()
         self.ConnectProducto = ProductoDao.ProductoBD()
@@ -30,6 +29,7 @@ class GuiaSalidaFRM:
         self.guiasal.bt_clear.clicked.connect(self.BtLimpiarReg)
         self.guiasal.bt_finalizar.clicked.connect(self.BtFinishReg)
         
+        self.Showdiget(self.guiasal.window_1)
         self.guiasal.show()
         
         

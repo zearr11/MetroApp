@@ -13,7 +13,6 @@ class RegProductosFRM:
         self.newProduct = uic.loadUi("view/FRM_REG_PROD_NUEVO.ui")
         self.newProduct.setWindowTitle("Gestion de Productos")
         
-        self.HideWidgets()
         self.ProductoDao = ProductoDao.ProductoBD()
         
         self.newProduct.tw_showProduct.cellClicked.connect(self.ClickTblProd)
@@ -23,6 +22,8 @@ class RegProductosFRM:
         self.newProduct.bt_mod.clicked.connect(self.BtModificar)
         self.newProduct.bt_guardar.clicked.connect(self.GuardadoProducto)
         self.newProduct.pb_actualizar.clicked.connect(self.SaveChangesProd)
+        
+        self.ShowWidget(self.newProduct.wd_reg_produ)
         self.newProduct.show()
     
     

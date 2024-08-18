@@ -13,7 +13,6 @@ class RegProveedorFRM:
     def __init__(self):
         self.newProv = uic.loadUi("view/FRM_REG_PROVE.ui")
         self.newProv.setWindowTitle("Gestion de Proveedores")
-        self.HideWidgets()
         
         #Cargado de Dao en ComboBox
         self.ConnectProveedorDao = ProveedorDao.ProveedorBD()
@@ -27,6 +26,8 @@ class RegProveedorFRM:
         self.newProv.bt_cancelar_prov.clicked.connect(self.CancelarProv)
         self.newProv.bt_guardar_prov.clicked.connect(self.GuardarProv)
         self.newProv.pb_actualizar.clicked.connect(self.ActualizaProvee)
+        
+        self.ShowWidget(self.newProv.window_1_pv)
         self.newProv.show()
         
     #################################################################################

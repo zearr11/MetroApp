@@ -14,8 +14,6 @@ class RegClientesFRM:
         self.newCient = uic.loadUi("view/FRM_REG_CLIENT.ui")
         self.newCient.setWindowTitle("Gestion de Clientes")
         
-        self.HideWidgets()
-        
         #Cargado de Dao en ComboBox
         self.ConnectClienteDao = ClienteDao.ClienteBD()
         ConnectDocumentoDao = TipoDocumentoDao.TipoDocumentoBD()
@@ -29,6 +27,7 @@ class RegClientesFRM:
         self.newCient.bt_nuevo_cl.clicked.connect(self.BtNuevo)
         self.newCient.bt_modCl.clicked.connect(self.BtModificar)
         
+        self.ShowWidget(self.newCient.window_1_cl)
         self.newCient.show()
         
         
@@ -126,7 +125,7 @@ class RegClientesFRM:
             elif self.TipoDOC == "CE":
                 ce_regex = r'^[a-zA-Z0-9]{9}$'
                 if not re.match(ce_regex, self.NumeroDoc):
-                    self.newCient.warning.setText("¡El Carnet de Extranjería ingresado no es válido! \nDebe tener 9 caracteres alfanuméricos")
+                    self.newCient.warning.setText("¡El Carnet de Extranjería ingresado no es válido! \nDebe tener 9 digitos")
                 else:
                     self.newCient.warning.setText("")
                     self.ValidacionClCorrecta()

@@ -57,3 +57,12 @@ class ProveedorBD:
         cursor.execute("SELECT RazonSocial FROM proveedor")
         rows = cursor.fetchall()
         return [row[0] for row in rows]
+    
+    def ObtenerIDCategoProve(self, idProveedor):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaIDCategoProve = "SELECT ca.idCategoria FROM PROVEEDOR pr inner join categoria ca on ca.idCategoria = pr.Categoria_idCategoria where pr.idProveedor = '{}'".format(idProveedor)
+        cursor.execute(ConsultaIDCategoProve)
+        objIDCategoProve = cursor.fetchone()
+        objCategoProve = objIDCategoProve[0]
+        return objCategoProve

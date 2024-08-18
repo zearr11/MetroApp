@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>452</width>
-    <height>671</height>
+    <height>672</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>452</width>
-    <height>611</height>
+    <height>672</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>452</width>
+    <height>672</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -453,7 +453,7 @@ color: white
       <property name="font">
        <font>
         <family>MS Shell Dlg 2</family>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -466,7 +466,7 @@ color: white
     border-radius: 5px;
     padding: 1px 18px 1px 3px;
     min-width: 6em;
-	font: 14pt &quot;MS Shell Dlg 2&quot;;
+	font: 12pt &quot;MS Shell Dlg 2&quot;;
 }
 
 QComboBox::drop-down {
@@ -535,6 +535,18 @@ QComboBox::down-arrow {
       <width>451</width>
       <height>671</height>
      </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>451</width>
+      <height>671</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>451</width>
+      <height>671</height>
+     </size>
     </property>
     <widget class="QLabel" name="label_12">
      <property name="geometry">
@@ -724,9 +736,9 @@ color: white
      <widget class="QLabel" name="comprasT_le">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>10</x>
         <y>35</y>
-        <width>91</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -781,9 +793,9 @@ color: white
      <widget class="QLabel" name="prodT_le">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>10</x>
         <y>35</y>
-        <width>91</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>
@@ -838,9 +850,9 @@ color: white
      <widget class="QLabel" name="dineroT_le">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>10</x>
         <y>35</y>
-        <width>91</width>
+        <width>291</width>
         <height>31</height>
        </rect>
       </property>

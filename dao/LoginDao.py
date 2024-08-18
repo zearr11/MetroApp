@@ -40,3 +40,12 @@ class LoginBD:
         objUltimoUsuarioID = cursor.fetchone()
         objUltimoUsuario = objUltimoUsuarioID[0]
         return objUltimoUsuario
+    
+    def ConsultaPermiso(self, idUsuario):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaPermiso = "SELECT pe.idPermisos from usuario u inner join permisos pe on pe.idPermisos = Permisos_idPermisos where u.idUsuario = '{}'".format(idUsuario)
+        cursor.execute(ConsultaPermiso)
+        objPermisoID = cursor.fetchone()
+        objPermiso = objPermisoID[0]
+        return objPermiso
