@@ -42,4 +42,21 @@ class UsuarioBD:
         nbd.conexionBD.commit()
         cursor.close()
         
+    def AllDataNombreDeUsuarios(self, idCargo):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        cursor.execute("select concat(p.Nombres,' ',p.Apellidos) from usuario u inner join persona p on p.idPersona = u.Persona_idPersona where u.Cargo_idCargo = '{}'".format(idCargo))
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]
+    
+    def UbicadorDeUsuarioXNombreYApellido(self, NombYApelli, idCargo):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerUsuarioID = "select u.idUsuario from usuario u inner join persona p on u.Persona_idPersona = p.idPersona where concat(p.Nombres,' ',p.Apellidos) = '{}' and u.Cargo_idCargo = '{}'".format(NombYApelli, idCargo)
+        cursor.execute(ObtenerUsuarioID)
+        objUsuarioID = cursor.fetchone()
+        objUsuario = objUsuarioID[0]
+        return objUsuario
+        
+        
         

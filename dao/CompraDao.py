@@ -47,3 +47,10 @@ class CompraBD:
         cursor.execute(query)
         nbd.conexionBD.commit()
         cursor.close()
+        
+    def ConsultaTablaComprasxUser(self, FechaDesde, FechaHasta, idUsuario):#
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaTablaComprasTotal = "select * from compra where Fecha between '{}' and '{}' and Usuario_idUsuario = '{}'".format(FechaDesde, FechaHasta, idUsuario)
+        cursor.execute(ConsultaTablaComprasTotal)
+        return cursor.fetchall()

@@ -42,3 +42,9 @@ class VentaBD:
         cursor.execute(ObtenerTablaVentas)
         return cursor.fetchall()
         
+    def ConsultaTablaVentasxUser(self, FechaDesde, FechaHasta, idUsuario):#
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ConsultaTablaVentasTotal = "select * from venta where Fecha between '{}' and '{}' and Usuario_idUsuario = '{}'".format(FechaDesde, FechaHasta, idUsuario)
+        cursor.execute(ConsultaTablaVentasTotal)
+        return cursor.fetchall()

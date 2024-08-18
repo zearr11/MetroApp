@@ -112,7 +112,7 @@ border-radius:13px</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reporte de Ventas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reporte de Compras&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -134,7 +134,7 @@ border-radius:13px</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../view_img/REPORTEVENTAS.png</pixmap>
+      <pixmap>../view_img/ReportCompras.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -605,7 +605,7 @@ border-radius: 20px;</string>
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../view_img/REPORTEVENTAS.png</pixmap>
+      <pixmap>../view_img/ReportCompras.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -640,7 +640,7 @@ border-radius: 20px;</string>
       <string notr="true">color: white</string>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reporte de Ventas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reporte de Compras&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -716,12 +716,12 @@ color: white
 </string>
      </property>
      <property name="title">
-      <string>Numero de Ventas Totales</string>
+      <string>Numero de Compras Totales</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
-     <widget class="QLabel" name="ventasT_le">
+     <widget class="QLabel" name="comprasT_le">
       <property name="geometry">
        <rect>
         <x>110</x>
@@ -773,7 +773,7 @@ color: white
 </string>
      </property>
      <property name="title">
-      <string>Productos Totales Vendidos</string>
+      <string>Productos Totales Comprados</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -830,7 +830,7 @@ color: white
 </string>
      </property>
      <property name="title">
-      <string>Dinero Total Recaudado</string>
+      <string>Dinero Total Gastado</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -870,10 +870,6 @@ color: white
     <zorder>GB_2_CLIENT_3</zorder>
     <zorder>GB_2_CLIENT_4</zorder>
    </widget>
-   <zorder>label</zorder>
-   <zorder>label_14</zorder>
-   <zorder>widget_2</zorder>
-   <zorder>widget_1</zorder>
   </widget>
  </widget>
  <resources>

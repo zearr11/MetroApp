@@ -17,3 +17,10 @@ class ReporteSalidaBD:
         ConsultaCantYtotXGuiaSalida = "select CantidadProd, TotalXproduct from reportedesalida where GuiaSalida_idGuiaSalida = '{}'".format(idGuiaSalida)
         cursor.execute(ConsultaCantYtotXGuiaSalida)
         return cursor.fetchall()
+    
+    def ConsultaTablaSalidaProductos(self, FechaDesde, FechaHasta):#
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        ObtenerTablaEntradaProductos = "select gs.idGuiaSalida, p.idProducto, CONCAT(p.Descripcion, ' ', p.Marca) AS Articulo, rs.CantidadProd, gs.Fecha from reportedesalida rs inner join guiasalida gs on rs.GuiaSalida_idGuiaSalida = gs.idGuiaSalida inner join producto p on rs.Producto_idProducto = p.idProducto where gs.Fecha between '{}' and '{}' order by gs.idGuiaSalida asc".format(FechaDesde, FechaHasta)
+        cursor.execute(ObtenerTablaEntradaProductos)
+        return cursor.fetchall()

@@ -1,6 +1,7 @@
 from PyQt5 import uic
 from controller import MenuPrincipal
 from dao import CompraDao, DetalleCompraDao, GuiaEntradaDao, ProductoDao
+from datetime import datetime
 
 
 class GuiaEntradaFRM:
@@ -176,8 +177,12 @@ class GuiaEntradaFRM:
         #print(self.LstIDproducts)
         #print(self.CodigoGuiaInput)
         
+        #Fecha de Recepcion
+        actual = datetime.now()
+        FechaRecepcion = actual.date()
+        
         for k in range(len(self.ProdCompr)):
-            self.ConexionGuiaEntradaDao.InsertTablaGuiaEntrada(self.Altenate[k], self.LstDetalleCompra[k], self.LstIDproducts[k], self.CodigoGuiaInput)
+            self.ConexionGuiaEntradaDao.InsertTablaGuiaEntrada(FechaRecepcion, self.Altenate[k], self.LstDetalleCompra[k], self.LstIDproducts[k], self.CodigoGuiaInput)
         
         for l in range(len(self.ProdCompr)):
             CantidadProd = self.ConexionProductoDao.ObtenerCantidadProd(self.LstIDproducts[l])

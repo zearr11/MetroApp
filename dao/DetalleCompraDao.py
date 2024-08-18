@@ -47,3 +47,19 @@ class DetalleCompraBD:
         ObtenerCantidadAumentadaS = cursor.fetchone()
         ObtenerCantidadAumentadaOne = ObtenerCantidadAumentadaS[0]
         return ObtenerCantidadAumentadaOne
+    
+    def ObtenerCantidadProdComprXUserandFecha(self, DateDesde, DateHasta, idUsuario):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        Consulta = "select dv.CantidadProdCompr from detallecompra dv inner join compra v on v.idCompra = dv.Compra_idCompra inner join usuario u on u.idUsuario = v.Usuario_idUsuario where v.Fecha between '{}' and '{}' and u.idUsuario = '{}'".format(DateDesde, DateHasta, idUsuario)
+        cursor.execute(Consulta)
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]
+
+    def ObtenerTotalDineroGastado(self, DateDesde, DateHasta, idUsuario):
+        nbd = ConexionBD.ConectBaseData()
+        cursor = nbd.conexionBD.cursor()
+        Consulta = "select dv.TotalXProd from detallecompra dv inner join compra v on v.idCompra = dv.Compra_idCompra inner join usuario u on u.idUsuario = v.Usuario_idUsuario where v.Fecha between '{}' and '{}' and u.idUsuario = '{}'".format(DateDesde, DateHasta, idUsuario)
+        cursor.execute(Consulta)
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]

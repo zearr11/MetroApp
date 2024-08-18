@@ -258,11 +258,11 @@ class GuiaSalidaFRM:
         
         #Insert en Tabla GuiaSalida
         ConnectGuiaSalidaDao.InsertTablaGuiaSalida(FechaGS, idMedPago, idUsuario, idCliente)
-        idGuiaSalida = ConnectGuiaSalidaDao.ObtenerGuiaSalidaID(FechaGS, idMedPago, idUsuario, idCliente)
+        idGuiaSalidA = ConnectGuiaSalidaDao.ObtenerUltimaGuiaSalidaID()
         
         #Insert en Tabla Reporte Salida
         for x in range(len(self.ListaProductosEnSalida)):
-            ConnectReportSalida.InsertTablaReporteSalida(idGuiaSalida, self.ObjProductoID[x], self.ObjCantidadProd[x], self.ObjPrecioTxProd[x])
+            ConnectReportSalida.InsertTablaReporteSalida(idGuiaSalidA, self.ObjProductoID[x], self.ObjCantidadProd[x], self.ObjPrecioTxProd[x])
         
         self.Descontador()
         self.BloqueoFinal()

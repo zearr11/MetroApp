@@ -1,5 +1,5 @@
 from PyQt5 import uic
-from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida
+from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario
 
 
 class MenuFRM:
@@ -18,6 +18,10 @@ class MenuFRM:
         
         self.menu.almac_1.clicked.connect(self.acceso_guia_entrada)
         self.menu.almac_2.clicked.connect(self.acceso_guia_salida)
+        
+        self.menu.report_1.clicked.connect(self.acceso_report_ventas)
+        self.menu.report_2.clicked.connect(self.acceso_report_compras)
+        self.menu.report_3.clicked.connect(self.acceso_gen_inventario)
         
         self.menu.segur_1.clicked.connect(self.acceso_pol_seguridad)
         self.menu.bt_cerrar_sesion.clicked.connect(self.cierre_sesion)
@@ -92,7 +96,15 @@ class MenuFRM:
         self.guiasal = GuiaSalida.GuiaSalidaFRM()
         
     #BOTON ingreso_reportes: 
-    
+    def acceso_report_ventas(self):
+        self.menu.close()
+        self.reportVent = ReportVentas.ReportVentasFRM()
+    def acceso_report_compras(self):
+        self.menu.close()
+        self.reportCompr = ReportCompras.ReportComprasFRM()
+    def acceso_gen_inventario(self):
+        self.menu.close()
+        self.genInv = GenInventario.GenInventarioFRM()
     
     #BOTON ingreso_seguridad: 
     def acceso_pol_seguridad(self):

@@ -1068,11 +1068,11 @@ Seguridad</string>
       </property>
      </widget>
     </widget>
-    <zorder>accion_reportes</zorder>
     <zorder>accion_seguridad</zorder>
     <zorder>accion_ventas</zorder>
     <zorder>accion_compras</zorder>
     <zorder>accion_almacen</zorder>
+    <zorder>accion_reportes</zorder>
    </widget>
    <zorder>fondo2</zorder>
    <zorder>label_5</zorder>
