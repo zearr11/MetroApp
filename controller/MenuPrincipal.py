@@ -1,5 +1,5 @@
 from PyQt5 import uic
-from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario
+from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario, GenBackUpBD
 from dao import LoginDao
 
 class MenuFRM:
@@ -25,6 +25,9 @@ class MenuFRM:
         self.menu.report_3.clicked.connect(self.acceso_gen_inventario)
         
         self.menu.segur_1.clicked.connect(self.acceso_pol_seguridad)
+        self.menu.segur_2.clicked.connect(self.acceso_gen_backupBD)
+        self.menu.segur_3.clicked.connect(self.acceso_restore_bd)
+        
         self.menu.bt_cerrar_sesion.clicked.connect(self.cierre_sesion)
         
         #Funcion de botones sin derivacion
@@ -118,7 +121,12 @@ class MenuFRM:
     def acceso_pol_seguridad(self):
         self.menu.close()
         self.poli = PoliticasSeguridad.PoliticasSeguridadFRM()
-        
+    def acceso_gen_backupBD(self):
+        self.menu.close()
+        self.backup = GenBackUpBD.GenBackUpFRM()
+    def acceso_restore_bd(self):
+        self.menu.close()
+        ################
         
     def cierre_sesion(self):
         self.menu.close()
