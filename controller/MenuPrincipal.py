@@ -1,5 +1,5 @@
 from PyQt5 import uic
-from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario, GenBackUpBD
+from controller import Login, PoliticasSeguridad, RegClientes, RegProductos, RegVenta, RegProveedor, GenPedCompra, GuiaEntrada, GuiaSalida, ReportVentas, ReportCompras, GenInventario, GenBackUpBD, RestoreBD
 from dao import LoginDao
 
 class MenuFRM:
@@ -126,12 +126,12 @@ class MenuFRM:
         self.backup = GenBackUpBD.GenBackUpFRM()
     def acceso_restore_bd(self):
         self.menu.close()
-        ################
+        self.restore = RestoreBD.RestaurarBD()
         
+    #BOTON regreso a login
     def cierre_sesion(self):
         self.menu.close()
         self.log = Login.LoginFRM()
-        
         
     def ComprobadorPermisos(self):
         idUser = self.ConexionLogin.ObtenerUltimoUsuario()

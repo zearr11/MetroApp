@@ -24,7 +24,7 @@ class GenBackUpFRM:
             self.backup.warning.setText("¡Back Up realizado con éxito!")
         else:
             if c is False:
-                self.backup.warning.setText("¡Se presentó un error, verifica el código!")
+                self.backup.warning.setText("¡Error! No se pudo hacer el BackUp")
     
     def BtCancelAccion(self):
         self.backup.close()
